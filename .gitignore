@@ -12,5 +12,6 @@ sql.env
 # Ignore log files
 *.log
 
-
+github
+github.pub
 
