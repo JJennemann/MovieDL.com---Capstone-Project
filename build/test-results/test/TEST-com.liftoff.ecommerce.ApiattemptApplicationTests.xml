@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.liftoff.ecommerce.ApiattemptApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-06-11T16:31:39" hostname="Joshs-Air.lan" time="0.095">
+<testsuite name="com.liftoff.ecommerce.ApiattemptApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-06-11T19:32:53" hostname="MovieDL" time="0.64">
   <properties/>
-  <testcase name="contextLoads()" classname="com.liftoff.ecommerce.ApiattemptApplicationTests" time="0.095"/>
-  <system-out><![CDATA[11:31:35.559 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Neither @ContextConfiguration nor @ContextHierarchy found for test class [ApiattemptApplicationTests]: using SpringBootContextLoader
-11:31:35.564 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader -- Could not detect default resource locations for test class [com.liftoff.ecommerce.ApiattemptApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
-11:31:35.565 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.liftoff.ecommerce.ApiattemptApplicationTests]: ApiattemptApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-11:31:35.581 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Using ContextCustomizers for test class [ApiattemptApplicationTests]: [DisableObservabilityContextCustomizer, PropertyMappingContextCustomizer, Customizer, ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, TestRestTemplateContextCustomizer]
-11:31:35.641 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider -- Identified candidate component class: file [/Users/joshjennemann/Desktop/launchcode/Unit-3/Liftoff-Team-Tjovi/build/classes/java/main/com/liftoff/ecommerce/ECommerceApp.class]
-11:31:35.641 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.liftoff.ecommerce.ECommerceApp for test class com.liftoff.ecommerce.ApiattemptApplicationTests
-11:31:35.734 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Using TestExecutionListeners for test class [ApiattemptApplicationTests]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, TransactionalTestExecutionListener, SqlScriptsTestExecutionListener, WithSecurityContextTestExecutionListener, EventPublishingTestExecutionListener, ReactorContextTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener, ResetMocksTestExecutionListener]
-11:31:35.735 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener -- Before test class: class [ApiattemptApplicationTests], class annotated with @DirtiesContext [false] with mode [null]
+  <testcase name="contextLoads()" classname="com.liftoff.ecommerce.ApiattemptApplicationTests" time="0.64"/>
+  <system-out><![CDATA[19:32:04.447 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Neither @ContextConfiguration nor @ContextHierarchy found for test class [ApiattemptApplicationTests]: using SpringBootContextLoader
+19:32:04.503 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader -- Could not detect default resource locations for test class [com.liftoff.ecommerce.ApiattemptApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+19:32:04.510 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.liftoff.ecommerce.ApiattemptApplicationTests]: ApiattemptApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+19:32:04.681 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Using ContextCustomizers for test class [ApiattemptApplicationTests]: [DisableObservabilityContextCustomizer, PropertyMappingContextCustomizer, Customizer, ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, TestRestTemplateContextCustomizer]
+19:32:05.187 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider -- Identified candidate component class: file [/root/backend/movieDL_backend/build/classes/java/main/com/liftoff/ecommerce/ECommerceApp.class]
+19:32:05.195 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.liftoff.ecommerce.ECommerceApp for test class com.liftoff.ecommerce.ApiattemptApplicationTests
+19:32:06.075 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Using TestExecutionListeners for test class [ApiattemptApplicationTests]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, TransactionalTestExecutionListener, SqlScriptsTestExecutionListener, WithSecurityContextTestExecutionListener, EventPublishingTestExecutionListener, ReactorContextTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener, ResetMocksTestExecutionListener]
+19:32:06.083 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener -- Before test class: class [ApiattemptApplicationTests], class annotated with @DirtiesContext [false] with mode [null]
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -19,43 +19,43 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.0.5)
 
-2023-06-11T11:31:35.977-05:00  INFO 42222 --- [    Test worker] c.l.e.ApiattemptApplicationTests         : Starting ApiattemptApplicationTests using Java 17.0.7 with PID 42222 (started by joshjennemann in /Users/joshjennemann/Desktop/launchcode/Unit-3/Liftoff-Team-Tjovi)
-2023-06-11T11:31:35.978-05:00  INFO 42222 --- [    Test worker] c.l.e.ApiattemptApplicationTests         : The following 1 profile is active: "test"
-2023-06-11T11:31:36.489-05:00  INFO 42222 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2023-06-11T11:31:36.491-05:00  INFO 42222 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2023-06-11T11:31:36.505-05:00 DEBUG 42222 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Scanning for JDBC repositories in packages com.liftoff.ecommerce.
-2023-06-11T11:31:36.513-05:00 DEBUG 42222 --- [    Test worker] o.s.d.r.c.RepositoryComponentProvider    : Identified candidate component class: file [/Users/joshjennemann/Desktop/launchcode/Unit-3/Liftoff-Team-Tjovi/build/classes/java/main/com/liftoff/ecommerce/Repositories/CompletedOrderRepository.class]
-2023-06-11T11:31:36.513-05:00 DEBUG 42222 --- [    Test worker] o.s.d.r.c.RepositoryComponentProvider    : Identified candidate component class: file [/Users/joshjennemann/Desktop/launchcode/Unit-3/Liftoff-Team-Tjovi/build/classes/java/main/com/liftoff/ecommerce/Repositories/CompletedOrderedItemRepository.class]
-2023-06-11T11:31:36.513-05:00 DEBUG 42222 --- [    Test worker] o.s.d.r.c.RepositoryComponentProvider    : Identified candidate component class: file [/Users/joshjennemann/Desktop/launchcode/Unit-3/Liftoff-Team-Tjovi/build/classes/java/main/com/liftoff/ecommerce/Repositories/CustomerRepository.class]
-2023-06-11T11:31:36.514-05:00 DEBUG 42222 --- [    Test worker] o.s.d.r.c.RepositoryComponentProvider    : Identified candidate component class: file [/Users/joshjennemann/Desktop/launchcode/Unit-3/Liftoff-Team-Tjovi/build/classes/java/main/com/liftoff/ecommerce/Repositories/GenreRepository.class]
-2023-06-11T11:31:36.514-05:00 DEBUG 42222 --- [    Test worker] o.s.d.r.c.RepositoryComponentProvider    : Identified candidate component class: file [/Users/joshjennemann/Desktop/launchcode/Unit-3/Liftoff-Team-Tjovi/build/classes/java/main/com/liftoff/ecommerce/Repositories/MovieRepository.class]
-2023-06-11T11:31:36.514-05:00 DEBUG 42222 --- [    Test worker] o.s.d.r.c.RepositoryComponentProvider    : Identified candidate component class: file [/Users/joshjennemann/Desktop/launchcode/Unit-3/Liftoff-Team-Tjovi/build/classes/java/main/com/liftoff/ecommerce/Repositories/ShoppingCartRepository.class]
-2023-06-11T11:31:36.524-05:00  INFO 42222 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.CompletedOrderRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2023-06-11T11:31:36.524-05:00  INFO 42222 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.CompletedOrderedItemRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2023-06-11T11:31:36.525-05:00  INFO 42222 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.CustomerRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2023-06-11T11:31:36.526-05:00  INFO 42222 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.GenreRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2023-06-11T11:31:36.526-05:00  INFO 42222 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.MovieRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2023-06-11T11:31:36.527-05:00  INFO 42222 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.ShoppingCartRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2023-06-11T11:31:36.527-05:00  INFO 42222 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 0 JDBC repository interfaces.
-2023-06-11T11:31:36.535-05:00  INFO 42222 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2023-06-11T11:31:36.536-05:00  INFO 42222 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-06-11T11:31:36.539-05:00 DEBUG 42222 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Scanning for JPA repositories in packages com.liftoff.ecommerce.
-2023-06-11T11:31:36.542-05:00 DEBUG 42222 --- [    Test worker] o.s.d.r.c.RepositoryComponentProvider    : Identified candidate component class: file [/Users/joshjennemann/Desktop/launchcode/Unit-3/Liftoff-Team-Tjovi/build/classes/java/main/com/liftoff/ecommerce/Repositories/CompletedOrderRepository.class]
-2023-06-11T11:31:36.542-05:00 DEBUG 42222 --- [    Test worker] o.s.d.r.c.RepositoryComponentProvider    : Identified candidate component class: file [/Users/joshjennemann/Desktop/launchcode/Unit-3/Liftoff-Team-Tjovi/build/classes/java/main/com/liftoff/ecommerce/Repositories/CompletedOrderedItemRepository.class]
-2023-06-11T11:31:36.542-05:00 DEBUG 42222 --- [    Test worker] o.s.d.r.c.RepositoryComponentProvider    : Identified candidate component class: file [/Users/joshjennemann/Desktop/launchcode/Unit-3/Liftoff-Team-Tjovi/build/classes/java/main/com/liftoff/ecommerce/Repositories/CustomerRepository.class]
-2023-06-11T11:31:36.542-05:00 DEBUG 42222 --- [    Test worker] o.s.d.r.c.RepositoryComponentProvider    : Identified candidate component class: file [/Users/joshjennemann/Desktop/launchcode/Unit-3/Liftoff-Team-Tjovi/build/classes/java/main/com/liftoff/ecommerce/Repositories/GenreRepository.class]
-2023-06-11T11:31:36.542-05:00 DEBUG 42222 --- [    Test worker] o.s.d.r.c.RepositoryComponentProvider    : Identified candidate component class: file [/Users/joshjennemann/Desktop/launchcode/Unit-3/Liftoff-Team-Tjovi/build/classes/java/main/com/liftoff/ecommerce/Repositories/MovieRepository.class]
-2023-06-11T11:31:36.542-05:00 DEBUG 42222 --- [    Test worker] o.s.d.r.c.RepositoryComponentProvider    : Identified candidate component class: file [/Users/joshjennemann/Desktop/launchcode/Unit-3/Liftoff-Team-Tjovi/build/classes/java/main/com/liftoff/ecommerce/Repositories/ShoppingCartRepository.class]
-2023-06-11T11:31:36.562-05:00  INFO 42222 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 6 JPA repository interfaces.
-2023-06-11T11:31:36.846-05:00  INFO 42222 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-06-11T11:31:37.070-05:00  INFO 42222 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
-2023-06-11T11:31:37.072-05:00  INFO 42222 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-06-11T11:31:37.150-05:00  INFO 42222 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-06-11T11:31:37.196-05:00  INFO 42222 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
-2023-06-11T11:31:37.423-05:00  INFO 42222 --- [    Test worker] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2023-06-11T11:31:37.424-05:00  WARN 42222 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-06-11T19:32:08.100Z  INFO 56431 --- [    Test worker] c.l.e.ApiattemptApplicationTests         : Starting ApiattemptApplicationTests using Java 17.0.11 with PID 56431 (started by root in /root/backend/movieDL_backend)
+2024-06-11T19:32:08.110Z  INFO 56431 --- [    Test worker] c.l.e.ApiattemptApplicationTests         : The following 1 profile is active: "test"
+2024-06-11T19:32:11.791Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-11T19:32:11.803Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-06-11T19:32:11.876Z DEBUG 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Scanning for JDBC repositories in packages com.liftoff.ecommerce.
+2024-06-11T19:32:11.936Z DEBUG 56431 --- [    Test worker] o.s.d.r.c.RepositoryComponentProvider    : Identified candidate component class: file [/root/backend/movieDL_backend/build/classes/java/main/com/liftoff/ecommerce/Repositories/CompletedOrderRepository.class]
+2024-06-11T19:32:11.937Z DEBUG 56431 --- [    Test worker] o.s.d.r.c.RepositoryComponentProvider    : Identified candidate component class: file [/root/backend/movieDL_backend/build/classes/java/main/com/liftoff/ecommerce/Repositories/CompletedOrderedItemRepository.class]
+2024-06-11T19:32:11.941Z DEBUG 56431 --- [    Test worker] o.s.d.r.c.RepositoryComponentProvider    : Identified candidate component class: file [/root/backend/movieDL_backend/build/classes/java/main/com/liftoff/ecommerce/Repositories/CustomerRepository.class]
+2024-06-11T19:32:11.952Z DEBUG 56431 --- [    Test worker] o.s.d.r.c.RepositoryComponentProvider    : Identified candidate component class: file [/root/backend/movieDL_backend/build/classes/java/main/com/liftoff/ecommerce/Repositories/GenreRepository.class]
+2024-06-11T19:32:11.954Z DEBUG 56431 --- [    Test worker] o.s.d.r.c.RepositoryComponentProvider    : Identified candidate component class: file [/root/backend/movieDL_backend/build/classes/java/main/com/liftoff/ecommerce/Repositories/MovieRepository.class]
+2024-06-11T19:32:11.956Z DEBUG 56431 --- [    Test worker] o.s.d.r.c.RepositoryComponentProvider    : Identified candidate component class: file [/root/backend/movieDL_backend/build/classes/java/main/com/liftoff/ecommerce/Repositories/ShoppingCartRepository.class]
+2024-06-11T19:32:12.023Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.CompletedOrderRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:32:12.031Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.CompletedOrderedItemRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:32:12.035Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.CustomerRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:32:12.043Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.GenreRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:32:12.060Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.MovieRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:32:12.068Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.ShoppingCartRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:32:12.070Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 183 ms. Found 0 JDBC repository interfaces.
+2024-06-11T19:32:12.132Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-11T19:32:12.141Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-11T19:32:12.162Z DEBUG 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Scanning for JPA repositories in packages com.liftoff.ecommerce.
+2024-06-11T19:32:12.183Z DEBUG 56431 --- [    Test worker] o.s.d.r.c.RepositoryComponentProvider    : Identified candidate component class: file [/root/backend/movieDL_backend/build/classes/java/main/com/liftoff/ecommerce/Repositories/CompletedOrderRepository.class]
+2024-06-11T19:32:12.185Z DEBUG 56431 --- [    Test worker] o.s.d.r.c.RepositoryComponentProvider    : Identified candidate component class: file [/root/backend/movieDL_backend/build/classes/java/main/com/liftoff/ecommerce/Repositories/CompletedOrderedItemRepository.class]
+2024-06-11T19:32:12.190Z DEBUG 56431 --- [    Test worker] o.s.d.r.c.RepositoryComponentProvider    : Identified candidate component class: file [/root/backend/movieDL_backend/build/classes/java/main/com/liftoff/ecommerce/Repositories/CustomerRepository.class]
+2024-06-11T19:32:12.192Z DEBUG 56431 --- [    Test worker] o.s.d.r.c.RepositoryComponentProvider    : Identified candidate component class: file [/root/backend/movieDL_backend/build/classes/java/main/com/liftoff/ecommerce/Repositories/GenreRepository.class]
+2024-06-11T19:32:12.194Z DEBUG 56431 --- [    Test worker] o.s.d.r.c.RepositoryComponentProvider    : Identified candidate component class: file [/root/backend/movieDL_backend/build/classes/java/main/com/liftoff/ecommerce/Repositories/MovieRepository.class]
+2024-06-11T19:32:12.196Z DEBUG 56431 --- [    Test worker] o.s.d.r.c.RepositoryComponentProvider    : Identified candidate component class: file [/root/backend/movieDL_backend/build/classes/java/main/com/liftoff/ecommerce/Repositories/ShoppingCartRepository.class]
+2024-06-11T19:32:12.345Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 182 ms. Found 6 JPA repository interfaces.
+2024-06-11T19:32:14.758Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-11T19:32:23.788Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-06-11T19:32:23.806Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-11T19:32:25.706Z  INFO 56431 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-11T19:32:27.230Z  INFO 56431 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
+2024-06-11T19:32:37.323Z  INFO 56431 --- [    Test worker] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2024-06-11T19:32:37.336Z  WARN 56431 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
 Hibernate: alter table authorities drop foreign key FKiu8p6nooga8l92xp15mjtije1
-2023-06-11T11:31:38.138-05:00  WARN 42222 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table authorities drop foreign key FKiu8p6nooga8l92xp15mjtije1" via JDBC Statement
+2024-06-11T19:32:45.856Z  WARN 56431 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table authorities drop foreign key FKiu8p6nooga8l92xp15mjtije1" via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table authorities drop foreign key FKiu8p6nooga8l92xp15mjtije1" via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
@@ -215,7 +215,7 @@ alter table authorities drop foreign key FKiu8p6nooga8l92xp15mjtije1 [42102-214]
 	... 129 common frames omitted
 
 Hibernate: alter table completed_order_items drop foreign key FK6wdn6n4d4qp532s517efyqx67
-2023-06-11T11:31:38.148-05:00  WARN 42222 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table completed_order_items drop foreign key FK6wdn6n4d4qp532s517efyqx67" via JDBC Statement
+2024-06-11T19:32:46.061Z  WARN 56431 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table completed_order_items drop foreign key FK6wdn6n4d4qp532s517efyqx67" via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table completed_order_items drop foreign key FK6wdn6n4d4qp532s517efyqx67" via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
@@ -375,7 +375,7 @@ alter table completed_order_items drop foreign key FK6wdn6n4d4qp532s517efyqx67 [
 	... 129 common frames omitted
 
 Hibernate: alter table completed_orders drop foreign key FKpq5o4jwx7jo47rcasxr30s79k
-2023-06-11T11:31:38.152-05:00  WARN 42222 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table completed_orders drop foreign key FKpq5o4jwx7jo47rcasxr30s79k" via JDBC Statement
+2024-06-11T19:32:46.124Z  WARN 56431 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table completed_orders drop foreign key FKpq5o4jwx7jo47rcasxr30s79k" via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table completed_orders drop foreign key FKpq5o4jwx7jo47rcasxr30s79k" via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
@@ -535,7 +535,7 @@ alter table completed_orders drop foreign key FKpq5o4jwx7jo47rcasxr30s79k [42102
 	... 129 common frames omitted
 
 Hibernate: alter table movie_genre drop foreign key FK86p3roa187k12avqfl28klp1q
-2023-06-11T11:31:38.157-05:00  WARN 42222 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table movie_genre drop foreign key FK86p3roa187k12avqfl28klp1q" via JDBC Statement
+2024-06-11T19:32:46.185Z  WARN 56431 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table movie_genre drop foreign key FK86p3roa187k12avqfl28klp1q" via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table movie_genre drop foreign key FK86p3roa187k12avqfl28klp1q" via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
@@ -695,7 +695,7 @@ alter table movie_genre drop foreign key FK86p3roa187k12avqfl28klp1q [42102-214]
 	... 129 common frames omitted
 
 Hibernate: alter table movie_genre drop foreign key FKp6vjabv2e2435at1hnuxg64yv
-2023-06-11T11:31:38.161-05:00  WARN 42222 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table movie_genre drop foreign key FKp6vjabv2e2435at1hnuxg64yv" via JDBC Statement
+2024-06-11T19:32:46.316Z  WARN 56431 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table movie_genre drop foreign key FKp6vjabv2e2435at1hnuxg64yv" via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table movie_genre drop foreign key FKp6vjabv2e2435at1hnuxg64yv" via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
@@ -855,7 +855,7 @@ alter table movie_genre drop foreign key FKp6vjabv2e2435at1hnuxg64yv [42102-214]
 	... 129 common frames omitted
 
 Hibernate: alter table shopping_cart drop foreign key FKh7db6pdgs2ol2t6k73wn3xj75
-2023-06-11T11:31:38.165-05:00  WARN 42222 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table shopping_cart drop foreign key FKh7db6pdgs2ol2t6k73wn3xj75" via JDBC Statement
+2024-06-11T19:32:46.421Z  WARN 56431 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table shopping_cart drop foreign key FKh7db6pdgs2ol2t6k73wn3xj75" via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table shopping_cart drop foreign key FKh7db6pdgs2ol2t6k73wn3xj75" via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
@@ -1024,7 +1024,7 @@ Hibernate: drop table if exists movie_genre
 Hibernate: drop table if exists movie_seq
 Hibernate: drop table if exists shopping_cart
 Hibernate: create table authorities (id bigint not null auto_increment, name varchar(255), customer_id bigint, primary key (id)) engine=InnoDB
-2023-06-11T11:31:38.174-05:00  WARN 42222 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "create table authorities (id bigint not null auto_increment, name varchar(255), customer_id bigint, primary key (id)) engine=InnoDB" via JDBC Statement
+2024-06-11T19:32:46.612Z  WARN 56431 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "create table authorities (id bigint not null auto_increment, name varchar(255), customer_id bigint, primary key (id)) engine=InnoDB" via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "create table authorities (id bigint not null auto_increment, name varchar(255), customer_id bigint, primary key (id)) engine=InnoDB" via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
@@ -1179,7 +1179,7 @@ create table authorities (id bigint not null auto_increment, name varchar(255), 
 	... 128 common frames omitted
 
 Hibernate: create table completed_order_items (order_item_id bigint not null auto_increment, movie_id bigint, movie_title varchar(255), quantity bigint, total_price float(53), order_id bigint, primary key (order_item_id)) engine=InnoDB
-2023-06-11T11:31:38.177-05:00  WARN 42222 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "create table completed_order_items (order_item_id bigint not null auto_increment, movie_id bigint, movie_title varchar(255), quantity bigint, total_price float(53), order_id bigint, primary key (order_item_id)) engine=InnoDB" via JDBC Statement
+2024-06-11T19:32:46.695Z  WARN 56431 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "create table completed_order_items (order_item_id bigint not null auto_increment, movie_id bigint, movie_title varchar(255), quantity bigint, total_price float(53), order_id bigint, primary key (order_item_id)) engine=InnoDB" via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "create table completed_order_items (order_item_id bigint not null auto_increment, movie_id bigint, movie_title varchar(255), quantity bigint, total_price float(53), order_id bigint, primary key (order_item_id)) engine=InnoDB" via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
@@ -1334,7 +1334,7 @@ create table completed_order_items (order_item_id bigint not null auto_increment
 	... 128 common frames omitted
 
 Hibernate: create table completed_orders (order_id bigint not null auto_increment, date_created varchar(255), email varchar(255), total_order_price float(53), total_order_quantity bigint, customer_id bigint, primary key (order_id)) engine=InnoDB
-2023-06-11T11:31:38.181-05:00  WARN 42222 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "create table completed_orders (order_id bigint not null auto_increment, date_created varchar(255), email varchar(255), total_order_price float(53), total_order_quantity bigint, customer_id bigint, primary key (order_id)) engine=InnoDB" via JDBC Statement
+2024-06-11T19:32:46.759Z  WARN 56431 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "create table completed_orders (order_id bigint not null auto_increment, date_created varchar(255), email varchar(255), total_order_price float(53), total_order_quantity bigint, customer_id bigint, primary key (order_id)) engine=InnoDB" via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "create table completed_orders (order_id bigint not null auto_increment, date_created varchar(255), email varchar(255), total_order_price float(53), total_order_quantity bigint, customer_id bigint, primary key (order_id)) engine=InnoDB" via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
@@ -1489,7 +1489,7 @@ create table completed_orders (order_id bigint not null auto_increment, date_cre
 	... 128 common frames omitted
 
 Hibernate: create table customer (customer_id bigint not null auto_increment, city varchar(255), create_dt varchar(255), email varchar(255), first_name varchar(255), last_name varchar(255), mobile_number varchar(255), pwd varchar(255), role varchar(255), state varchar(255), street_address varchar(255), suite_number varchar(255), zip_code bigint, primary key (customer_id)) engine=InnoDB
-2023-06-11T11:31:38.185-05:00  WARN 42222 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "create table customer (customer_id bigint not null auto_increment, city varchar(255), create_dt varchar(255), email varchar(255), first_name varchar(255), last_name varchar(255), mobile_number varchar(255), pwd varchar(255), role varchar(255), state varchar(255), street_address varchar(255), suite_number varchar(255), zip_code bigint, primary key (customer_id)) engine=InnoDB" via JDBC Statement
+2024-06-11T19:32:46.825Z  WARN 56431 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "create table customer (customer_id bigint not null auto_increment, city varchar(255), create_dt varchar(255), email varchar(255), first_name varchar(255), last_name varchar(255), mobile_number varchar(255), pwd varchar(255), role varchar(255), state varchar(255), street_address varchar(255), suite_number varchar(255), zip_code bigint, primary key (customer_id)) engine=InnoDB" via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "create table customer (customer_id bigint not null auto_increment, city varchar(255), create_dt varchar(255), email varchar(255), first_name varchar(255), last_name varchar(255), mobile_number varchar(255), pwd varchar(255), role varchar(255), state varchar(255), street_address varchar(255), suite_number varchar(255), zip_code bigint, primary key (customer_id)) engine=InnoDB" via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
@@ -1644,7 +1644,7 @@ create table customer (customer_id bigint not null auto_increment, city varchar(
 	... 128 common frames omitted
 
 Hibernate: create table genre (id integer not null, name varchar(255), primary key (id)) engine=InnoDB
-2023-06-11T11:31:38.187-05:00  WARN 42222 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "create table genre (id integer not null, name varchar(255), primary key (id)) engine=InnoDB" via JDBC Statement
+2024-06-11T19:32:46.908Z  WARN 56431 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "create table genre (id integer not null, name varchar(255), primary key (id)) engine=InnoDB" via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "create table genre (id integer not null, name varchar(255), primary key (id)) engine=InnoDB" via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
@@ -1798,10 +1798,10 @@ create table genre (id integer not null, name varchar(255), primary key (id)) en
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
 	... 128 common frames omitted
 
-Hibernate: create table movie (id bigint not null, overview text, poster_path varchar(255), price float(53), release_date varchar(255), runtime varchar(255), title varchar(255), primary key (id)) engine=InnoDB
-2023-06-11T11:31:38.190-05:00  WARN 42222 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "create table movie (id bigint not null, overview text, poster_path varchar(255), price float(53), release_date varchar(255), runtime varchar(255), title varchar(255), primary key (id)) engine=InnoDB" via JDBC Statement
+Hibernate: create table movie (id bigint not null, imdb_id varchar(255), overview text, popularity varchar(255), poster_path varchar(255), price float(53), release_date varchar(255), runtime varchar(255), tagline varchar(255), title varchar(255), vote_average varchar(255), primary key (id)) engine=InnoDB
+2024-06-11T19:32:46.984Z  WARN 56431 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "create table movie (id bigint not null, imdb_id varchar(255), overview text, popularity varchar(255), poster_path varchar(255), price float(53), release_date varchar(255), runtime varchar(255), tagline varchar(255), title varchar(255), vote_average varchar(255), primary key (id)) engine=InnoDB" via JDBC Statement
 
-org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "create table movie (id bigint not null, overview text, poster_path varchar(255), price float(53), release_date varchar(255), runtime varchar(255), title varchar(255), primary key (id)) engine=InnoDB" via JDBC Statement
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "create table movie (id bigint not null, imdb_id varchar(255), overview text, popularity varchar(255), poster_path varchar(255), price float(53), release_date varchar(255), runtime varchar(255), tagline varchar(255), title varchar(255), vote_average varchar(255), primary key (id)) engine=InnoDB" via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
 	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.applySqlString(SchemaCreatorImpl.java:502) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
 	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.applySqlStrings(SchemaCreatorImpl.java:486) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
@@ -1931,8 +1931,8 @@ org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "c
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65) ~[na:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) ~[gradle-worker.jar:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) ~[gradle-worker.jar:na]
-Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table movie (id bigint not null, overview text, poster_path varchar(255), price float(53), release_date varchar(255), runtime varchar(255), title varchar(255), primary key (id)) engine[*]=InnoDB"; expected "identifier"; SQL statement:
-create table movie (id bigint not null, overview text, poster_path varchar(255), price float(53), release_date varchar(255), runtime varchar(255), title varchar(255), primary key (id)) engine=InnoDB [42001-214]
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table movie (id bigint not null, imdb_id varchar(255), overview text, popularity varchar(255), poster_path varchar(255), price float(53), release_date varchar(255), runtime varchar(255), tagline varchar(255), title varchar(255), vote_average varchar(255), primary key (id)) engine[*]=InnoDB"; expected "identifier"; SQL statement:
+create table movie (id bigint not null, imdb_id varchar(255), overview text, popularity varchar(255), poster_path varchar(255), price float(53), release_date varchar(255), runtime varchar(255), tagline varchar(255), title varchar(255), vote_average varchar(255), primary key (id)) engine=InnoDB [42001-214]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502) ~[h2-2.1.214.jar:2.1.214]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477) ~[h2-2.1.214.jar:2.1.214]
 	at org.h2.message.DbException.getSyntaxError(DbException.java:261) ~[h2-2.1.214.jar:2.1.214]
@@ -1954,7 +1954,7 @@ create table movie (id bigint not null, overview text, poster_path varchar(255),
 	... 128 common frames omitted
 
 Hibernate: create table movie_genre (movie_id bigint not null, genre_id integer not null, primary key (movie_id, genre_id)) engine=InnoDB
-2023-06-11T11:31:38.194-05:00  WARN 42222 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "create table movie_genre (movie_id bigint not null, genre_id integer not null, primary key (movie_id, genre_id)) engine=InnoDB" via JDBC Statement
+2024-06-11T19:32:47.063Z  WARN 56431 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "create table movie_genre (movie_id bigint not null, genre_id integer not null, primary key (movie_id, genre_id)) engine=InnoDB" via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "create table movie_genre (movie_id bigint not null, genre_id integer not null, primary key (movie_id, genre_id)) engine=InnoDB" via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
@@ -2109,7 +2109,7 @@ create table movie_genre (movie_id bigint not null, genre_id integer not null, p
 	... 128 common frames omitted
 
 Hibernate: create table movie_seq (next_val bigint) engine=InnoDB
-2023-06-11T11:31:38.197-05:00  WARN 42222 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "create table movie_seq (next_val bigint) engine=InnoDB" via JDBC Statement
+2024-06-11T19:32:47.145Z  WARN 56431 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "create table movie_seq (next_val bigint) engine=InnoDB" via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "create table movie_seq (next_val bigint) engine=InnoDB" via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
@@ -2264,7 +2264,7 @@ create table movie_seq (next_val bigint) engine=InnoDB [42001-214]
 	... 128 common frames omitted
 
 Hibernate: insert into movie_seq values ( 1 )
-2023-06-11T11:31:38.200-05:00  WARN 42222 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "insert into movie_seq values ( 1 )" via JDBC Statement
+2024-06-11T19:32:47.217Z  WARN 56431 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "insert into movie_seq values ( 1 )" via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "insert into movie_seq values ( 1 )" via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
@@ -2422,7 +2422,7 @@ insert into movie_seq values ( 1 ) [42104-214]
 	... 128 common frames omitted
 
 Hibernate: create table shopping_cart (cart_id bigint not null auto_increment, movie_id bigint, quantity bigint, total_price float(53), customer_id bigint, primary key (cart_id)) engine=InnoDB
-2023-06-11T11:31:38.202-05:00  WARN 42222 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "create table shopping_cart (cart_id bigint not null auto_increment, movie_id bigint, quantity bigint, total_price float(53), customer_id bigint, primary key (cart_id)) engine=InnoDB" via JDBC Statement
+2024-06-11T19:32:47.297Z  WARN 56431 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "create table shopping_cart (cart_id bigint not null auto_increment, movie_id bigint, quantity bigint, total_price float(53), customer_id bigint, primary key (cart_id)) engine=InnoDB" via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "create table shopping_cart (cart_id bigint not null auto_increment, movie_id bigint, quantity bigint, total_price float(53), customer_id bigint, primary key (cart_id)) engine=InnoDB" via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
@@ -2577,7 +2577,7 @@ create table shopping_cart (cart_id bigint not null auto_increment, movie_id big
 	... 128 common frames omitted
 
 Hibernate: alter table authorities add constraint FKiu8p6nooga8l92xp15mjtije1 foreign key (customer_id) references customer (customer_id)
-2023-06-11T11:31:38.205-05:00  WARN 42222 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table authorities add constraint FKiu8p6nooga8l92xp15mjtije1 foreign key (customer_id) references customer (customer_id)" via JDBC Statement
+2024-06-11T19:32:47.391Z  WARN 56431 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table authorities add constraint FKiu8p6nooga8l92xp15mjtije1 foreign key (customer_id) references customer (customer_id)" via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table authorities add constraint FKiu8p6nooga8l92xp15mjtije1 foreign key (customer_id) references customer (customer_id)" via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
@@ -2726,7 +2726,7 @@ alter table authorities add constraint FKiu8p6nooga8l92xp15mjtije1 foreign key (
 	... 128 common frames omitted
 
 Hibernate: alter table completed_order_items add constraint FK6wdn6n4d4qp532s517efyqx67 foreign key (order_id) references completed_orders (order_id)
-2023-06-11T11:31:38.208-05:00  WARN 42222 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table completed_order_items add constraint FK6wdn6n4d4qp532s517efyqx67 foreign key (order_id) references completed_orders (order_id)" via JDBC Statement
+2024-06-11T19:32:47.466Z  WARN 56431 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table completed_order_items add constraint FK6wdn6n4d4qp532s517efyqx67 foreign key (order_id) references completed_orders (order_id)" via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table completed_order_items add constraint FK6wdn6n4d4qp532s517efyqx67 foreign key (order_id) references completed_orders (order_id)" via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
@@ -2875,7 +2875,7 @@ alter table completed_order_items add constraint FK6wdn6n4d4qp532s517efyqx67 for
 	... 128 common frames omitted
 
 Hibernate: alter table completed_orders add constraint FKpq5o4jwx7jo47rcasxr30s79k foreign key (customer_id) references customer (customer_id)
-2023-06-11T11:31:38.210-05:00  WARN 42222 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table completed_orders add constraint FKpq5o4jwx7jo47rcasxr30s79k foreign key (customer_id) references customer (customer_id)" via JDBC Statement
+2024-06-11T19:32:47.527Z  WARN 56431 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table completed_orders add constraint FKpq5o4jwx7jo47rcasxr30s79k foreign key (customer_id) references customer (customer_id)" via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table completed_orders add constraint FKpq5o4jwx7jo47rcasxr30s79k foreign key (customer_id) references customer (customer_id)" via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
@@ -3024,7 +3024,7 @@ alter table completed_orders add constraint FKpq5o4jwx7jo47rcasxr30s79k foreign 
 	... 128 common frames omitted
 
 Hibernate: alter table movie_genre add constraint FK86p3roa187k12avqfl28klp1q foreign key (genre_id) references genre (id)
-2023-06-11T11:31:38.212-05:00  WARN 42222 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table movie_genre add constraint FK86p3roa187k12avqfl28klp1q foreign key (genre_id) references genre (id)" via JDBC Statement
+2024-06-11T19:32:47.581Z  WARN 56431 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table movie_genre add constraint FK86p3roa187k12avqfl28klp1q foreign key (genre_id) references genre (id)" via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table movie_genre add constraint FK86p3roa187k12avqfl28klp1q foreign key (genre_id) references genre (id)" via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
@@ -3173,7 +3173,7 @@ alter table movie_genre add constraint FK86p3roa187k12avqfl28klp1q foreign key (
 	... 128 common frames omitted
 
 Hibernate: alter table movie_genre add constraint FKp6vjabv2e2435at1hnuxg64yv foreign key (movie_id) references movie (id)
-2023-06-11T11:31:38.215-05:00  WARN 42222 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table movie_genre add constraint FKp6vjabv2e2435at1hnuxg64yv foreign key (movie_id) references movie (id)" via JDBC Statement
+2024-06-11T19:32:47.627Z  WARN 56431 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table movie_genre add constraint FKp6vjabv2e2435at1hnuxg64yv foreign key (movie_id) references movie (id)" via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table movie_genre add constraint FKp6vjabv2e2435at1hnuxg64yv foreign key (movie_id) references movie (id)" via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
@@ -3322,7 +3322,7 @@ alter table movie_genre add constraint FKp6vjabv2e2435at1hnuxg64yv foreign key (
 	... 128 common frames omitted
 
 Hibernate: alter table shopping_cart add constraint FKh7db6pdgs2ol2t6k73wn3xj75 foreign key (customer_id) references customer (customer_id)
-2023-06-11T11:31:38.217-05:00  WARN 42222 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table shopping_cart add constraint FKh7db6pdgs2ol2t6k73wn3xj75 foreign key (customer_id) references customer (customer_id)" via JDBC Statement
+2024-06-11T19:32:47.679Z  WARN 56431 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table shopping_cart add constraint FKh7db6pdgs2ol2t6k73wn3xj75 foreign key (customer_id) references customer (customer_id)" via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table shopping_cart add constraint FKh7db6pdgs2ol2t6k73wn3xj75 foreign key (customer_id) references customer (customer_id)" via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
@@ -3470,33 +3470,33 @@ alter table shopping_cart add constraint FKh7db6pdgs2ol2t6k73wn3xj75 foreign key
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
 	... 128 common frames omitted
 
-2023-06-11T11:31:38.220-05:00  INFO 42222 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-06-11T11:31:38.227-05:00  INFO 42222 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-06-11T11:31:38.257-05:00 DEBUG 42222 --- [    Test worker] .c.JpaMetamodelMappingContextFactoryBean : Initializing JpaMetamodelMappingContext…
-2023-06-11T11:31:38.268-05:00 DEBUG 42222 --- [    Test worker] .c.JpaMetamodelMappingContextFactoryBean : Finished initializing JpaMetamodelMappingContext
-2023-06-11T11:31:38.340-05:00 DEBUG 42222 --- [    Test worker] o.s.d.r.c.s.RepositoryFactorySupport     : Initializing repository instance for com.liftoff.ecommerce.Repositories.MovieRepository…
-2023-06-11T11:31:38.386-05:00 DEBUG 42222 --- [    Test worker] o.s.d.r.c.s.RepositoryFactorySupport     : Finished creation of repository instance for com.liftoff.ecommerce.Repositories.MovieRepository.
-2023-06-11T11:31:38.398-05:00 DEBUG 42222 --- [    Test worker] o.s.d.r.c.s.RepositoryFactorySupport     : Initializing repository instance for com.liftoff.ecommerce.Repositories.ShoppingCartRepository…
-2023-06-11T11:31:38.411-05:00 DEBUG 42222 --- [    Test worker] o.s.d.jpa.repository.query.NamedQuery    : Looking up named query ShoppingCart.findByCustomerId
-2023-06-11T11:31:38.414-05:00 DEBUG 42222 --- [    Test worker] o.s.d.jpa.repository.query.NamedQuery    : Did not find named query ShoppingCart.findByCustomerId
-2023-06-11T11:31:38.451-05:00 DEBUG 42222 --- [    Test worker] o.s.d.r.c.s.RepositoryFactorySupport     : Finished creation of repository instance for com.liftoff.ecommerce.Repositories.ShoppingCartRepository.
-2023-06-11T11:31:38.456-05:00 DEBUG 42222 --- [    Test worker] o.s.d.r.c.s.RepositoryFactorySupport     : Initializing repository instance for com.liftoff.ecommerce.Repositories.CompletedOrderRepository…
-2023-06-11T11:31:38.459-05:00 DEBUG 42222 --- [    Test worker] o.s.d.jpa.repository.query.NamedQuery    : Looking up named query CompletedOrder.findByCustomerId
-2023-06-11T11:31:38.459-05:00 DEBUG 42222 --- [    Test worker] o.s.d.jpa.repository.query.NamedQuery    : Did not find named query CompletedOrder.findByCustomerId
-2023-06-11T11:31:38.461-05:00 DEBUG 42222 --- [    Test worker] o.s.d.r.c.s.RepositoryFactorySupport     : Finished creation of repository instance for com.liftoff.ecommerce.Repositories.CompletedOrderRepository.
-2023-06-11T11:31:38.463-05:00 DEBUG 42222 --- [    Test worker] o.s.d.r.c.s.RepositoryFactorySupport     : Initializing repository instance for com.liftoff.ecommerce.Repositories.CompletedOrderedItemRepository…
-2023-06-11T11:31:38.464-05:00 DEBUG 42222 --- [    Test worker] o.s.d.jpa.repository.query.NamedQuery    : Looking up named query CompletedOrderItem.findByCompletedOrderId
-2023-06-11T11:31:38.465-05:00 DEBUG 42222 --- [    Test worker] o.s.d.jpa.repository.query.NamedQuery    : Did not find named query CompletedOrderItem.findByCompletedOrderId
-2023-06-11T11:31:38.466-05:00 DEBUG 42222 --- [    Test worker] o.s.d.r.c.s.RepositoryFactorySupport     : Finished creation of repository instance for com.liftoff.ecommerce.Repositories.CompletedOrderedItemRepository.
-2023-06-11T11:31:38.471-05:00 DEBUG 42222 --- [    Test worker] o.s.d.r.c.s.RepositoryFactorySupport     : Initializing repository instance for com.liftoff.ecommerce.Repositories.GenreRepository…
-2023-06-11T11:31:38.483-05:00 DEBUG 42222 --- [    Test worker] o.s.d.r.c.s.RepositoryFactorySupport     : Finished creation of repository instance for com.liftoff.ecommerce.Repositories.GenreRepository.
-2023-06-11T11:31:38.486-05:00 DEBUG 42222 --- [    Test worker] o.s.d.r.c.s.RepositoryFactorySupport     : Initializing repository instance for com.liftoff.ecommerce.Repositories.CustomerRepository…
-2023-06-11T11:31:38.488-05:00 DEBUG 42222 --- [    Test worker] o.s.d.jpa.repository.query.NamedQuery    : Looking up named query Customer.findByEmail
-2023-06-11T11:31:38.488-05:00 DEBUG 42222 --- [    Test worker] o.s.d.jpa.repository.query.NamedQuery    : Did not find named query Customer.findByEmail
-2023-06-11T11:31:38.490-05:00 DEBUG 42222 --- [    Test worker] o.s.d.r.c.s.RepositoryFactorySupport     : Finished creation of repository instance for com.liftoff.ecommerce.Repositories.CustomerRepository.
-2023-06-11T11:31:38.519-05:00  WARN 42222 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-06-11T11:31:38.733-05:00  INFO 42222 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7e99d03a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@23e892d3, org.springframework.security.web.context.SecurityContextHolderFilter@262717bf, org.springframework.security.web.header.HeaderWriterFilter@514b88b7, org.springframework.web.filter.CorsFilter@3d21400c, org.springframework.security.web.authentication.logout.LogoutFilter@49fa32ee, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@53517736, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@35454e3b, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@16ce05de, com.liftoff.ecommerce.filter.JWTTokenValidatorFilter@26e61f3d, com.liftoff.ecommerce.filter.AuthoritiesLoggingAtFilter@41ff6f38, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@48e2a9cb, com.liftoff.ecommerce.filter.AuthoritiesLoggingAfterFilter@76e9662b, com.liftoff.ecommerce.filter.JWTTokenGeneratorFilter@106f7ddd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5e2abff2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@54e8ba11, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@666971a, org.springframework.security.web.session.SessionManagementFilter@2e1189ce, org.springframework.security.web.access.ExceptionTranslationFilter@75d80b46, org.springframework.security.web.access.intercept.AuthorizationFilter@36806af3]
-2023-06-11T11:31:38.743-05:00  WARN 42222 --- [    Test worker] o.s.s.c.a.web.builders.WebSecurity       : 
+2024-06-11T19:32:47.739Z  INFO 56431 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-06-11T19:32:47.822Z  INFO 56431 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T19:32:48.088Z DEBUG 56431 --- [    Test worker] .c.JpaMetamodelMappingContextFactoryBean : Initializing JpaMetamodelMappingContext…
+2024-06-11T19:32:48.173Z DEBUG 56431 --- [    Test worker] .c.JpaMetamodelMappingContextFactoryBean : Finished initializing JpaMetamodelMappingContext
+2024-06-11T19:32:48.675Z DEBUG 56431 --- [    Test worker] o.s.d.r.c.s.RepositoryFactorySupport     : Initializing repository instance for com.liftoff.ecommerce.Repositories.MovieRepository…
+2024-06-11T19:32:48.978Z DEBUG 56431 --- [    Test worker] o.s.d.r.c.s.RepositoryFactorySupport     : Finished creation of repository instance for com.liftoff.ecommerce.Repositories.MovieRepository.
+2024-06-11T19:32:49.081Z DEBUG 56431 --- [    Test worker] o.s.d.r.c.s.RepositoryFactorySupport     : Initializing repository instance for com.liftoff.ecommerce.Repositories.ShoppingCartRepository…
+2024-06-11T19:32:49.168Z DEBUG 56431 --- [    Test worker] o.s.d.jpa.repository.query.NamedQuery    : Looking up named query ShoppingCart.findByCustomerId
+2024-06-11T19:32:49.186Z DEBUG 56431 --- [    Test worker] o.s.d.jpa.repository.query.NamedQuery    : Did not find named query ShoppingCart.findByCustomerId
+2024-06-11T19:32:49.381Z DEBUG 56431 --- [    Test worker] o.s.d.r.c.s.RepositoryFactorySupport     : Finished creation of repository instance for com.liftoff.ecommerce.Repositories.ShoppingCartRepository.
+2024-06-11T19:32:49.461Z DEBUG 56431 --- [    Test worker] o.s.d.r.c.s.RepositoryFactorySupport     : Initializing repository instance for com.liftoff.ecommerce.Repositories.CompletedOrderRepository…
+2024-06-11T19:32:49.478Z DEBUG 56431 --- [    Test worker] o.s.d.jpa.repository.query.NamedQuery    : Looking up named query CompletedOrder.findByCustomerId
+2024-06-11T19:32:49.480Z DEBUG 56431 --- [    Test worker] o.s.d.jpa.repository.query.NamedQuery    : Did not find named query CompletedOrder.findByCustomerId
+2024-06-11T19:32:49.491Z DEBUG 56431 --- [    Test worker] o.s.d.r.c.s.RepositoryFactorySupport     : Finished creation of repository instance for com.liftoff.ecommerce.Repositories.CompletedOrderRepository.
+2024-06-11T19:32:49.511Z DEBUG 56431 --- [    Test worker] o.s.d.r.c.s.RepositoryFactorySupport     : Initializing repository instance for com.liftoff.ecommerce.Repositories.CompletedOrderedItemRepository…
+2024-06-11T19:32:49.522Z DEBUG 56431 --- [    Test worker] o.s.d.jpa.repository.query.NamedQuery    : Looking up named query CompletedOrderItem.findByCompletedOrderId
+2024-06-11T19:32:49.524Z DEBUG 56431 --- [    Test worker] o.s.d.jpa.repository.query.NamedQuery    : Did not find named query CompletedOrderItem.findByCompletedOrderId
+2024-06-11T19:32:49.535Z DEBUG 56431 --- [    Test worker] o.s.d.r.c.s.RepositoryFactorySupport     : Finished creation of repository instance for com.liftoff.ecommerce.Repositories.CompletedOrderedItemRepository.
+2024-06-11T19:32:49.570Z DEBUG 56431 --- [    Test worker] o.s.d.r.c.s.RepositoryFactorySupport     : Initializing repository instance for com.liftoff.ecommerce.Repositories.GenreRepository…
+2024-06-11T19:32:49.620Z DEBUG 56431 --- [    Test worker] o.s.d.r.c.s.RepositoryFactorySupport     : Finished creation of repository instance for com.liftoff.ecommerce.Repositories.GenreRepository.
+2024-06-11T19:32:49.649Z DEBUG 56431 --- [    Test worker] o.s.d.r.c.s.RepositoryFactorySupport     : Initializing repository instance for com.liftoff.ecommerce.Repositories.CustomerRepository…
+2024-06-11T19:32:49.667Z DEBUG 56431 --- [    Test worker] o.s.d.jpa.repository.query.NamedQuery    : Looking up named query Customer.findByEmail
+2024-06-11T19:32:49.668Z DEBUG 56431 --- [    Test worker] o.s.d.jpa.repository.query.NamedQuery    : Did not find named query Customer.findByEmail
+2024-06-11T19:32:49.676Z DEBUG 56431 --- [    Test worker] o.s.d.r.c.s.RepositoryFactorySupport     : Finished creation of repository instance for com.liftoff.ecommerce.Repositories.CustomerRepository.
+2024-06-11T19:32:49.923Z  WARN 56431 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-11T19:32:51.543Z  INFO 56431 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6f4ded72, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@547dd11e, org.springframework.security.web.context.SecurityContextHolderFilter@7c9eb178, org.springframework.security.web.header.HeaderWriterFilter@3a98c6d2, org.springframework.web.filter.CorsFilter@445f815f, org.springframework.security.web.authentication.logout.LogoutFilter@df9940b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@37754509, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@45f829ed, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@1ee17264, com.liftoff.ecommerce.filter.JWTTokenValidatorFilter@1ec72ab7, com.liftoff.ecommerce.filter.AuthoritiesLoggingAtFilter@2488fd50, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4d1ec2bf, com.liftoff.ecommerce.filter.AuthoritiesLoggingAfterFilter@1ce5c5e7, com.liftoff.ecommerce.filter.JWTTokenGeneratorFilter@982f64d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@54118bbf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5b4b2bfa, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2e37e758, org.springframework.security.web.session.SessionManagementFilter@1d694d9a, org.springframework.security.web.access.ExceptionTranslationFilter@5092d376, org.springframework.security.web.access.intercept.AuthorizationFilter@29ffc1f3]
+2024-06-11T19:32:51.588Z  WARN 56431 --- [    Test worker] o.s.s.c.a.web.builders.WebSecurity       : 
 
 ********************************************************************
 **********        Security debugging is enabled.       *************
@@ -3505,36 +3505,36 @@ alter table shopping_cart add constraint FKh7db6pdgs2ol2t6k73wn3xj75 foreign key
 ********************************************************************
 
 
-2023-06-11T11:31:38.916-05:00 DEBUG 42222 --- [    Test worker] o.s.data.convert.CustomConversions       : Adding converter from class java.sql.Timestamp to class java.time.LocalDateTime as reading converter
-2023-06-11T11:31:38.916-05:00 DEBUG 42222 --- [    Test worker] o.s.data.convert.CustomConversions       : Adding converter from class java.sql.Timestamp to class java.time.LocalDate as reading converter
-2023-06-11T11:31:38.916-05:00 DEBUG 42222 --- [    Test worker] o.s.data.convert.CustomConversions       : Adding converter from class java.time.LocalDate to class java.sql.Timestamp as writing converter
-2023-06-11T11:31:38.916-05:00 DEBUG 42222 --- [    Test worker] o.s.data.convert.CustomConversions       : Adding converter from class java.sql.Timestamp to class java.time.LocalTime as reading converter
-2023-06-11T11:31:38.916-05:00 DEBUG 42222 --- [    Test worker] o.s.data.convert.CustomConversions       : Adding converter from class java.time.LocalTime to class java.sql.Timestamp as writing converter
-2023-06-11T11:31:38.916-05:00 DEBUG 42222 --- [    Test worker] o.s.data.convert.CustomConversions       : Adding converter from class java.sql.Timestamp to class java.time.Instant as reading converter
-2023-06-11T11:31:38.916-05:00 DEBUG 42222 --- [    Test worker] o.s.data.convert.CustomConversions       : Adding converter from class java.time.Instant to class java.sql.Timestamp as writing converter
-2023-06-11T11:31:38.916-05:00 DEBUG 42222 --- [    Test worker] o.s.data.convert.CustomConversions       : Adding converter from interface org.springframework.data.jdbc.core.mapping.AggregateReference to class java.lang.Object as writing converter
-2023-06-11T11:31:38.916-05:00 DEBUG 42222 --- [    Test worker] o.s.data.convert.CustomConversions       : Adding converter from class java.lang.Object to interface org.springframework.data.jdbc.core.mapping.AggregateReference as reading converter
-2023-06-11T11:31:38.916-05:00 DEBUG 42222 --- [    Test worker] o.s.data.convert.CustomConversions       : Adding converter from class java.util.Date to class java.time.LocalDateTime as reading converter
-2023-06-11T11:31:38.916-05:00 DEBUG 42222 --- [    Test worker] o.s.data.convert.CustomConversions       : Adding converter from class java.time.LocalDateTime to class java.util.Date as writing converter
-2023-06-11T11:31:38.916-05:00 DEBUG 42222 --- [    Test worker] o.s.data.convert.CustomConversions       : Adding converter from class java.util.Date to class java.time.LocalDate as reading converter
-2023-06-11T11:31:38.916-05:00 DEBUG 42222 --- [    Test worker] o.s.data.convert.CustomConversions       : Adding converter from class java.time.LocalDate to class java.util.Date as writing converter
-2023-06-11T11:31:38.916-05:00 DEBUG 42222 --- [    Test worker] o.s.data.convert.CustomConversions       : Adding converter from class java.util.Date to class java.time.LocalTime as reading converter
-2023-06-11T11:31:38.916-05:00 DEBUG 42222 --- [    Test worker] o.s.data.convert.CustomConversions       : Adding converter from class java.time.LocalTime to class java.util.Date as writing converter
-2023-06-11T11:31:38.916-05:00 DEBUG 42222 --- [    Test worker] o.s.data.convert.CustomConversions       : Adding converter from class java.util.Date to class java.time.Instant as reading converter
-2023-06-11T11:31:38.916-05:00 DEBUG 42222 --- [    Test worker] o.s.data.convert.CustomConversions       : Adding converter from class java.time.Instant to class java.util.Date as writing converter
-2023-06-11T11:31:38.916-05:00 DEBUG 42222 --- [    Test worker] o.s.data.convert.CustomConversions       : Adding converter from class java.time.LocalDateTime to class java.time.Instant as reading converter
-2023-06-11T11:31:38.916-05:00 DEBUG 42222 --- [    Test worker] o.s.data.convert.CustomConversions       : Adding converter from class java.time.Instant to class java.time.LocalDateTime as reading converter
-2023-06-11T11:31:38.916-05:00 DEBUG 42222 --- [    Test worker] o.s.data.convert.CustomConversions       : Adding converter from class java.time.ZoneId to class java.lang.String as writing converter
-2023-06-11T11:31:38.916-05:00 DEBUG 42222 --- [    Test worker] o.s.data.convert.CustomConversions       : Adding converter from class java.lang.String to class java.time.ZoneId as reading converter
-2023-06-11T11:31:38.916-05:00 DEBUG 42222 --- [    Test worker] o.s.data.convert.CustomConversions       : Adding converter from class java.time.Duration to class java.lang.String as writing converter
-2023-06-11T11:31:38.916-05:00 DEBUG 42222 --- [    Test worker] o.s.data.convert.CustomConversions       : Adding converter from class java.lang.String to class java.time.Duration as reading converter
-2023-06-11T11:31:38.917-05:00 DEBUG 42222 --- [    Test worker] o.s.data.convert.CustomConversions       : Adding converter from class java.time.Period to class java.lang.String as writing converter
-2023-06-11T11:31:38.917-05:00 DEBUG 42222 --- [    Test worker] o.s.data.convert.CustomConversions       : Adding converter from class java.lang.String to class java.time.Period as reading converter
-2023-06-11T11:31:38.917-05:00 DEBUG 42222 --- [    Test worker] o.s.data.convert.CustomConversions       : Adding converter from class java.lang.String to class java.time.LocalDate as reading converter
-2023-06-11T11:31:38.917-05:00 DEBUG 42222 --- [    Test worker] o.s.data.convert.CustomConversions       : Adding converter from class java.lang.String to class java.time.LocalDateTime as reading converter
-2023-06-11T11:31:38.917-05:00 DEBUG 42222 --- [    Test worker] o.s.data.convert.CustomConversions       : Adding converter from class java.lang.String to class java.time.Instant as reading converter
-2023-06-11T11:31:38.967-05:00  INFO 42222 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2023-06-11T11:31:38.990-05:00  INFO 42222 --- [    Test worker] c.l.e.ApiattemptApplicationTests         : Started ApiattemptApplicationTests in 3.221 seconds (process running for 4.149)
+2024-06-11T19:32:52.728Z DEBUG 56431 --- [    Test worker] o.s.data.convert.CustomConversions       : Adding converter from class java.sql.Timestamp to class java.time.LocalDateTime as reading converter
+2024-06-11T19:32:52.730Z DEBUG 56431 --- [    Test worker] o.s.data.convert.CustomConversions       : Adding converter from class java.sql.Timestamp to class java.time.LocalDate as reading converter
+2024-06-11T19:32:52.734Z DEBUG 56431 --- [    Test worker] o.s.data.convert.CustomConversions       : Adding converter from class java.time.LocalDate to class java.sql.Timestamp as writing converter
+2024-06-11T19:32:52.738Z DEBUG 56431 --- [    Test worker] o.s.data.convert.CustomConversions       : Adding converter from class java.sql.Timestamp to class java.time.LocalTime as reading converter
+2024-06-11T19:32:52.742Z DEBUG 56431 --- [    Test worker] o.s.data.convert.CustomConversions       : Adding converter from class java.time.LocalTime to class java.sql.Timestamp as writing converter
+2024-06-11T19:32:52.743Z DEBUG 56431 --- [    Test worker] o.s.data.convert.CustomConversions       : Adding converter from class java.sql.Timestamp to class java.time.Instant as reading converter
+2024-06-11T19:32:52.743Z DEBUG 56431 --- [    Test worker] o.s.data.convert.CustomConversions       : Adding converter from class java.time.Instant to class java.sql.Timestamp as writing converter
+2024-06-11T19:32:52.744Z DEBUG 56431 --- [    Test worker] o.s.data.convert.CustomConversions       : Adding converter from interface org.springframework.data.jdbc.core.mapping.AggregateReference to class java.lang.Object as writing converter
+2024-06-11T19:32:52.745Z DEBUG 56431 --- [    Test worker] o.s.data.convert.CustomConversions       : Adding converter from class java.lang.Object to interface org.springframework.data.jdbc.core.mapping.AggregateReference as reading converter
+2024-06-11T19:32:52.745Z DEBUG 56431 --- [    Test worker] o.s.data.convert.CustomConversions       : Adding converter from class java.util.Date to class java.time.LocalDateTime as reading converter
+2024-06-11T19:32:52.745Z DEBUG 56431 --- [    Test worker] o.s.data.convert.CustomConversions       : Adding converter from class java.time.LocalDateTime to class java.util.Date as writing converter
+2024-06-11T19:32:52.745Z DEBUG 56431 --- [    Test worker] o.s.data.convert.CustomConversions       : Adding converter from class java.util.Date to class java.time.LocalDate as reading converter
+2024-06-11T19:32:52.745Z DEBUG 56431 --- [    Test worker] o.s.data.convert.CustomConversions       : Adding converter from class java.time.LocalDate to class java.util.Date as writing converter
+2024-06-11T19:32:52.746Z DEBUG 56431 --- [    Test worker] o.s.data.convert.CustomConversions       : Adding converter from class java.util.Date to class java.time.LocalTime as reading converter
+2024-06-11T19:32:52.746Z DEBUG 56431 --- [    Test worker] o.s.data.convert.CustomConversions       : Adding converter from class java.time.LocalTime to class java.util.Date as writing converter
+2024-06-11T19:32:52.746Z DEBUG 56431 --- [    Test worker] o.s.data.convert.CustomConversions       : Adding converter from class java.util.Date to class java.time.Instant as reading converter
+2024-06-11T19:32:52.746Z DEBUG 56431 --- [    Test worker] o.s.data.convert.CustomConversions       : Adding converter from class java.time.Instant to class java.util.Date as writing converter
+2024-06-11T19:32:52.747Z DEBUG 56431 --- [    Test worker] o.s.data.convert.CustomConversions       : Adding converter from class java.time.LocalDateTime to class java.time.Instant as reading converter
+2024-06-11T19:32:52.747Z DEBUG 56431 --- [    Test worker] o.s.data.convert.CustomConversions       : Adding converter from class java.time.Instant to class java.time.LocalDateTime as reading converter
+2024-06-11T19:32:52.747Z DEBUG 56431 --- [    Test worker] o.s.data.convert.CustomConversions       : Adding converter from class java.time.ZoneId to class java.lang.String as writing converter
+2024-06-11T19:32:52.748Z DEBUG 56431 --- [    Test worker] o.s.data.convert.CustomConversions       : Adding converter from class java.lang.String to class java.time.ZoneId as reading converter
+2024-06-11T19:32:52.748Z DEBUG 56431 --- [    Test worker] o.s.data.convert.CustomConversions       : Adding converter from class java.time.Duration to class java.lang.String as writing converter
+2024-06-11T19:32:52.749Z DEBUG 56431 --- [    Test worker] o.s.data.convert.CustomConversions       : Adding converter from class java.lang.String to class java.time.Duration as reading converter
+2024-06-11T19:32:52.749Z DEBUG 56431 --- [    Test worker] o.s.data.convert.CustomConversions       : Adding converter from class java.time.Period to class java.lang.String as writing converter
+2024-06-11T19:32:52.749Z DEBUG 56431 --- [    Test worker] o.s.data.convert.CustomConversions       : Adding converter from class java.lang.String to class java.time.Period as reading converter
+2024-06-11T19:32:52.750Z DEBUG 56431 --- [    Test worker] o.s.data.convert.CustomConversions       : Adding converter from class java.lang.String to class java.time.LocalDate as reading converter
+2024-06-11T19:32:52.754Z DEBUG 56431 --- [    Test worker] o.s.data.convert.CustomConversions       : Adding converter from class java.lang.String to class java.time.LocalDateTime as reading converter
+2024-06-11T19:32:52.754Z DEBUG 56431 --- [    Test worker] o.s.data.convert.CustomConversions       : Adding converter from class java.lang.String to class java.time.Instant as reading converter
+2024-06-11T19:32:53.099Z  INFO 56431 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-06-11T19:32:53.279Z  INFO 56431 --- [    Test worker] c.l.e.ApiattemptApplicationTests         : Started ApiattemptApplicationTests in 46.913 seconds (process running for 57.037)
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

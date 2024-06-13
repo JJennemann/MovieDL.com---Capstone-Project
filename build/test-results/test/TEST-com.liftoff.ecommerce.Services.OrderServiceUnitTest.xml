@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.liftoff.ecommerce.Services.OrderServiceUnitTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2024-06-11T19:34:37" hostname="MovieDL" time="6.3">
+  <properties/>
+  <testcase name="testReturnAllCompletedOrdersByIdNotFound()" classname="com.liftoff.ecommerce.Services.OrderServiceUnitTest" time="4.692"/>
+  <testcase name="testReturnMostRecentCompletedOrderSuccess()" classname="com.liftoff.ecommerce.Services.OrderServiceUnitTest" time="0.017"/>
+  <testcase name="testTotalOrderPriceOrderItemsNotFound()" classname="com.liftoff.ecommerce.Services.OrderServiceUnitTest" time="0.014"/>
+  <testcase name="testReturnAllCompletedOrdersNotFound()" classname="com.liftoff.ecommerce.Services.OrderServiceUnitTest" time="0.011"/>
+  <testcase name="testCreateNewOrderNoMovieFoundNoMovieFound()" classname="com.liftoff.ecommerce.Services.OrderServiceUnitTest" time="0.773"/>
+  <testcase name="testTotalOrderPriceSuccess()" classname="com.liftoff.ecommerce.Services.OrderServiceUnitTest" time="0.014"/>
+  <testcase name="testReturnAllCompletedOrdersByIdSuccess()" classname="com.liftoff.ecommerce.Services.OrderServiceUnitTest" time="0.014"/>
+  <testcase name="testCreateNewOrderNoCartFound()" classname="com.liftoff.ecommerce.Services.OrderServiceUnitTest" time="0.291"/>
+  <testcase name="testCreateNewOrderSuccess()" classname="com.liftoff.ecommerce.Services.OrderServiceUnitTest" time="0.084"/>
+  <testcase name="testReturnMostRecentCompletedOrderNotFound()" classname="com.liftoff.ecommerce.Services.OrderServiceUnitTest" time="0.292"/>
+  <testcase name="testReturnAllCompletedOrdersTestSuccess()" classname="com.liftoff.ecommerce.Services.OrderServiceUnitTest" time="0.01"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

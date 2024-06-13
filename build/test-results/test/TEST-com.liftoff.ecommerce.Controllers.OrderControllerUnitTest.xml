@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.liftoff.ecommerce.Controllers.OrderControllerUnitTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2024-06-11T19:33:25" hostname="MovieDL" time="0.742">
+  <properties/>
+  <testcase name="testReturnMostRecentCompletedOrderSuccess()" classname="com.liftoff.ecommerce.Controllers.OrderControllerUnitTest" time="0.566"/>
+  <testcase name="testCreateNewOrderMovieNotFound()" classname="com.liftoff.ecommerce.Controllers.OrderControllerUnitTest" time="0.025"/>
+  <testcase name="testReturnAllCompletedOrdersNotFound()" classname="com.liftoff.ecommerce.Controllers.OrderControllerUnitTest" time="0.02"/>
+  <testcase name="testReturnAllCompletedOrdersByCustomerIdSuccess()" classname="com.liftoff.ecommerce.Controllers.OrderControllerUnitTest" time="0.017"/>
+  <testcase name="testReturnAllCompletedOrdersByCustomerIdNotFound()" classname="com.liftoff.ecommerce.Controllers.OrderControllerUnitTest" time="0.009"/>
+  <testcase name="testReturnAllCompletedOrdersSuccess()" classname="com.liftoff.ecommerce.Controllers.OrderControllerUnitTest" time="0.014"/>
+  <testcase name="testCreateNewOrderSuccess()" classname="com.liftoff.ecommerce.Controllers.OrderControllerUnitTest" time="0.015"/>
+  <testcase name="testReturnMostRecentCompletedOrderNotFound()" classname="com.liftoff.ecommerce.Controllers.OrderControllerUnitTest" time="0.015"/>
+  <testcase name="testCreateNewOrderCartsNotFound()" classname="com.liftoff.ecommerce.Controllers.OrderControllerUnitTest" time="0.019"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

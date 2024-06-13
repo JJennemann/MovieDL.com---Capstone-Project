@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.liftoff.ecommerce.Models.ShoppingCartUnitTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-06-11T19:33:56" hostname="MovieDL" time="0.014">
+  <properties/>
+  <testcase name="testShoppingCartConstructorNoArgs()" classname="com.liftoff.ecommerce.Models.ShoppingCartUnitTest" time="0.004"/>
+  <testcase name="testShoppingCartProperties()" classname="com.liftoff.ecommerce.Models.ShoppingCartUnitTest" time="0.001"/>
+  <testcase name="testShoppingCartConstructorParameterized()" classname="com.liftoff.ecommerce.Models.ShoppingCartUnitTest" time="0.006"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

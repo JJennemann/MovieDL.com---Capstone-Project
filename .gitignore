@@ -1,0 +1,11 @@
+# Ignore environment variables
+.env
+
+# Ignore IntelliJ IDEA files
+.idea/
+
+# Ignore Gradle files
+.gradle/
+
+# Ignore log files
+*.log

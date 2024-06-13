@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.liftoff.ecommerce.Services.OrderServiceIntegrationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-06-11T16:31:42" hostname="Joshs-Air.lan" time="0.044">
+<testsuite name="com.liftoff.ecommerce.Services.OrderServiceIntegrationTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2024-06-11T19:33:59" hostname="MovieDL" time="37.504">
   <properties/>
-  <testcase name="returnAllCompletedOrdersTest()" classname="com.liftoff.ecommerce.Services.OrderServiceIntegrationTest" time="0.044"/>
-  <system-out><![CDATA[2023-06-11T11:31:42.153-05:00  INFO 42222 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.liftoff.ecommerce.Services.OrderServiceIntegrationTest]: OrderServiceIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2023-06-11T11:31:42.157-05:00  INFO 42222 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.liftoff.ecommerce.ECommerceApp for test class com.liftoff.ecommerce.Services.OrderServiceIntegrationTest
+  <testcase name="TestReturnAllCompletedOrdersNotFound()" classname="com.liftoff.ecommerce.Services.OrderServiceIntegrationTest" time="0.154"/>
+  <testcase name="testSetTotalOrderPriceSuccess()" classname="com.liftoff.ecommerce.Services.OrderServiceIntegrationTest" time="0.28"/>
+  <testcase name="testCreateNewOrderMovieNotFoundRuntimeException()" classname="com.liftoff.ecommerce.Services.OrderServiceIntegrationTest" time="0.212"/>
+  <testcase name="TestReturnAllCompletedOrdersByCustomerIdOrdersNotFound()" classname="com.liftoff.ecommerce.Services.OrderServiceIntegrationTest" time="0.336"/>
+  <testcase name="TestReturnMostRecentCompletedOrderSuccess()" classname="com.liftoff.ecommerce.Services.OrderServiceIntegrationTest" time="0.227"/>
+  <testcase name="testSetTotalOrderPriceMovieNotFoundRuntimeException()" classname="com.liftoff.ecommerce.Services.OrderServiceIntegrationTest" time="0.083"/>
+  <testcase name="testCreateNewOrderCartNotFound()" classname="com.liftoff.ecommerce.Services.OrderServiceIntegrationTest" time="0.069"/>
+  <testcase name="testReturnAllCompletedOrdersSuccess()" classname="com.liftoff.ecommerce.Services.OrderServiceIntegrationTest" time="0.113"/>
+  <testcase name="testCreateNewOrderSuccess()" classname="com.liftoff.ecommerce.Services.OrderServiceIntegrationTest" time="0.181"/>
+  <testcase name="TestReturnMostRecentCompletedOrderNotFound()" classname="com.liftoff.ecommerce.Services.OrderServiceIntegrationTest" time="0.827"/>
+  <testcase name="TestReturnAllCompletedOrdersByCustomerIdSuccess()" classname="com.liftoff.ecommerce.Services.OrderServiceIntegrationTest" time="1.341"/>
+  <system-out><![CDATA[2024-06-11T19:33:56.919Z  INFO 56431 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.liftoff.ecommerce.Services.OrderServiceIntegrationTest]: OrderServiceIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-06-11T19:33:56.984Z  INFO 56431 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.liftoff.ecommerce.ECommerceApp for test class com.liftoff.ecommerce.Services.OrderServiceIntegrationTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -13,30 +23,30 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.0.5)
 
-2023-06-11T11:31:42.165-05:00  INFO 42222 --- [    Test worker] c.l.e.S.OrderServiceIntegrationTest      : Starting OrderServiceIntegrationTest using Java 17.0.7 with PID 42222 (started by joshjennemann in /Users/joshjennemann/Desktop/launchcode/Unit-3/Liftoff-Team-Tjovi)
-2023-06-11T11:31:42.165-05:00  INFO 42222 --- [    Test worker] c.l.e.S.OrderServiceIntegrationTest      : No active profile set, falling back to 1 default profile: "default"
-2023-06-11T11:31:42.219-05:00  INFO 42222 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2023-06-11T11:31:42.219-05:00  INFO 42222 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2023-06-11T11:31:42.222-05:00  INFO 42222 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.CompletedOrderRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2023-06-11T11:31:42.222-05:00  INFO 42222 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.CompletedOrderedItemRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2023-06-11T11:31:42.222-05:00  INFO 42222 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.CustomerRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2023-06-11T11:31:42.222-05:00  INFO 42222 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.GenreRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2023-06-11T11:31:42.222-05:00  INFO 42222 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.MovieRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2023-06-11T11:31:42.222-05:00  INFO 42222 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.ShoppingCartRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2023-06-11T11:31:42.222-05:00  INFO 42222 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 JDBC repository interfaces.
-2023-06-11T11:31:42.223-05:00  INFO 42222 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2023-06-11T11:31:42.223-05:00  INFO 42222 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-06-11T11:31:42.227-05:00  INFO 42222 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 6 JPA repository interfaces.
-2023-06-11T11:31:42.252-05:00  INFO 42222 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
-2023-06-11T11:31:42.252-05:00  INFO 42222 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Added connection conn70: url=jdbc:h2:mem:testdb user=SA
-2023-06-11T11:31:42.253-05:00  INFO 42222 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
-2023-06-11T11:31:42.259-05:00  INFO 42222 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-06-11T11:31:42.261-05:00  INFO 42222 --- [    Test worker] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2023-06-11T11:31:42.310-05:00  INFO 42222 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-06-11T11:31:42.311-05:00  INFO 42222 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-06-11T11:31:42.350-05:00  WARN 42222 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-06-11T11:31:42.378-05:00  INFO 42222 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@57484e17, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@39390c7c, org.springframework.security.web.context.SecurityContextHolderFilter@793de73f, org.springframework.security.web.header.HeaderWriterFilter@46e6ebc6, org.springframework.web.filter.CorsFilter@280fbfbd, org.springframework.security.web.authentication.logout.LogoutFilter@2d84bbe0, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@70fc3b75, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@5a9da49b, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@2e0ff1c0, com.liftoff.ecommerce.filter.JWTTokenValidatorFilter@3ba23ae0, com.liftoff.ecommerce.filter.AuthoritiesLoggingAtFilter@4a099b04, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@782fc531, com.liftoff.ecommerce.filter.AuthoritiesLoggingAfterFilter@1fae37af, com.liftoff.ecommerce.filter.JWTTokenGeneratorFilter@4e7e446b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@fcdd4f5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7e84a611, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@64a1027e, org.springframework.security.web.session.SessionManagementFilter@73bae0ea, org.springframework.security.web.access.ExceptionTranslationFilter@721082d7, org.springframework.security.web.access.intercept.AuthorizationFilter@41e5ef45]
-2023-06-11T11:31:42.380-05:00  WARN 42222 --- [    Test worker] o.s.s.c.a.web.builders.WebSecurity       : 
+2024-06-11T19:33:57.045Z  INFO 56431 --- [    Test worker] c.l.e.S.OrderServiceIntegrationTest      : Starting OrderServiceIntegrationTest using Java 17.0.11 with PID 56431 (started by root in /root/backend/movieDL_backend)
+2024-06-11T19:33:57.063Z  INFO 56431 --- [    Test worker] c.l.e.S.OrderServiceIntegrationTest      : No active profile set, falling back to 1 default profile: "default"
+2024-06-11T19:33:57.687Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-11T19:33:57.691Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-06-11T19:33:57.717Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.CompletedOrderRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:33:57.718Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.CompletedOrderedItemRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:33:57.718Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.CustomerRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:33:57.719Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.GenreRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:33:57.719Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.MovieRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:33:57.719Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.ShoppingCartRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:33:57.720Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 0 JDBC repository interfaces.
+2024-06-11T19:33:57.732Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-11T19:33:57.733Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-11T19:33:57.800Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 66 ms. Found 6 JPA repository interfaces.
+2024-06-11T19:33:58.090Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-22 - Starting...
+2024-06-11T19:33:58.101Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-22 - Added connection conn210: url=jdbc:h2:mem:testdb user=SA
+2024-06-11T19:33:58.102Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-22 - Start completed.
+2024-06-11T19:33:58.197Z  INFO 56431 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-11T19:33:58.223Z  INFO 56431 --- [    Test worker] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-06-11T19:33:58.695Z  INFO 56431 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-06-11T19:33:58.697Z  INFO 56431 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T19:33:58.941Z  WARN 56431 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-11T19:33:59.164Z  INFO 56431 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@69d9344a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6d2ecbad, org.springframework.security.web.context.SecurityContextHolderFilter@17493bf7, org.springframework.security.web.header.HeaderWriterFilter@57804f4b, org.springframework.web.filter.CorsFilter@6cd4b686, org.springframework.security.web.authentication.logout.LogoutFilter@1616c9, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@38672385, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@5257e97f, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@5a45b638, com.liftoff.ecommerce.filter.JWTTokenValidatorFilter@7a1ea25e, com.liftoff.ecommerce.filter.AuthoritiesLoggingAtFilter@61767d13, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@877ca1e, com.liftoff.ecommerce.filter.AuthoritiesLoggingAfterFilter@285f973d, com.liftoff.ecommerce.filter.JWTTokenGeneratorFilter@5fdc1078, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@38669c7f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6d49762f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@505f458f, org.springframework.security.web.session.SessionManagementFilter@403ff3da, org.springframework.security.web.access.ExceptionTranslationFilter@5b2e85c4, org.springframework.security.web.access.intercept.AuthorizationFilter@4bb9f94d]
+2024-06-11T19:33:59.169Z  WARN 56431 --- [    Test worker] o.s.s.c.a.web.builders.WebSecurity       : 
 
 ********************************************************************
 **********        Security debugging is enabled.       *************
@@ -45,175 +55,515 @@
 ********************************************************************
 
 
-2023-06-11T11:31:42.408-05:00  INFO 42222 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2023-06-11T11:31:42.411-05:00  INFO 42222 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2023-06-11T11:31:42.411-05:00  INFO 42222 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2023-06-11T11:31:42.411-05:00  INFO 42222 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-2023-06-11T11:31:42.414-05:00  INFO 42222 --- [    Test worker] c.l.e.S.OrderServiceIntegrationTest      : Started OrderServiceIntegrationTest in 0.255 seconds (process running for 7.573)
-2023-06-11T11:31:42.431-05:00  INFO 42222 --- [    Test worker] Spring Security Debugger                 : 
+2024-06-11T19:33:59.425Z  INFO 56431 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-06-11T19:33:59.484Z  INFO 56431 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-06-11T19:33:59.490Z  INFO 56431 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-06-11T19:33:59.493Z  INFO 56431 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2024-06-11T19:33:59.514Z  INFO 56431 --- [    Test worker] c.l.e.S.OrderServiceIntegrationTest      : Started OrderServiceIntegrationTest in 2.509 seconds (process running for 123.272)
+2024-06-11T19:33:59.659Z  INFO 56431 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T19:33:59.663Z  INFO 56431 --- [    Test worker] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2024-06-11T19:33:59.675Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-22 - Shutdown initiated...
+2024-06-11T19:33:59.689Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-22 - Shutdown completed.
 
-************************************************************
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.0.5)
 
-Request received for GET '/order/allOrdersHistory':
+2024-06-11T19:33:59.779Z  INFO 56431 --- [    Test worker] c.l.e.S.OrderServiceIntegrationTest      : Starting OrderServiceIntegrationTest using Java 17.0.11 with PID 56431 (started by root in /root/backend/movieDL_backend)
+2024-06-11T19:33:59.780Z  INFO 56431 --- [    Test worker] c.l.e.S.OrderServiceIntegrationTest      : No active profile set, falling back to 1 default profile: "default"
+2024-06-11T19:34:00.480Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-11T19:34:00.482Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-06-11T19:34:00.521Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.CompletedOrderRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:00.522Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.CompletedOrderedItemRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:00.522Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.CustomerRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:00.523Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.GenreRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:00.523Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.MovieRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:00.527Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.ShoppingCartRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:00.527Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 0 JDBC repository interfaces.
+2024-06-11T19:34:00.538Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-11T19:34:00.538Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-11T19:34:00.595Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 6 JPA repository interfaces.
+2024-06-11T19:34:00.907Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-23 - Starting...
+2024-06-11T19:34:00.917Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-23 - Added connection conn220: url=jdbc:h2:mem:testdb user=SA
+2024-06-11T19:34:00.917Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-23 - Start completed.
+2024-06-11T19:34:01.015Z  INFO 56431 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-11T19:34:01.039Z  INFO 56431 --- [    Test worker] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-06-11T19:34:01.628Z  INFO 56431 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-06-11T19:34:01.630Z  INFO 56431 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T19:34:02.138Z  WARN 56431 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-11T19:34:02.404Z  INFO 56431 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@701c3aed, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@9fce531, org.springframework.security.web.context.SecurityContextHolderFilter@4d997f03, org.springframework.security.web.header.HeaderWriterFilter@bc30190, org.springframework.web.filter.CorsFilter@1332bb1d, org.springframework.security.web.authentication.logout.LogoutFilter@5ab1b735, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@58884b98, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@1108364b, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@26ed1c97, com.liftoff.ecommerce.filter.JWTTokenValidatorFilter@373781f5, com.liftoff.ecommerce.filter.AuthoritiesLoggingAtFilter@590c3f4f, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@f5757a3, com.liftoff.ecommerce.filter.AuthoritiesLoggingAfterFilter@5f609d20, com.liftoff.ecommerce.filter.JWTTokenGeneratorFilter@11273bff, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@41b19442, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@526dc265, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1a942807, org.springframework.security.web.session.SessionManagementFilter@5fa390ab, org.springframework.security.web.access.ExceptionTranslationFilter@391e6b4, org.springframework.security.web.access.intercept.AuthorizationFilter@3619e007]
+2024-06-11T19:34:02.458Z  WARN 56431 --- [    Test worker] o.s.s.c.a.web.builders.WebSecurity       : 
 
-org.springframework.mock.web.MockHttpServletRequest@72a8be44
-
-servletPath:
-pathInfo:/order/allOrdersHistory
-headers: 
-
-
-Security filter chain: [
-  DisableEncodeUrlFilter
-  WebAsyncManagerIntegrationFilter
-  SecurityContextHolderFilter
-  HeaderWriterFilter
-  CorsFilter
-  LogoutFilter
-  UsernamePasswordAuthenticationFilter
-  DefaultLoginPageGeneratingFilter
-  DefaultLogoutPageGeneratingFilter
-  JWTTokenValidatorFilter
-  AuthoritiesLoggingAtFilter
-  BasicAuthenticationFilter
-  AuthoritiesLoggingAfterFilter
-  JWTTokenGeneratorFilter
-  RequestCacheAwareFilter
-  SecurityContextHolderAwareRequestFilter
-  AnonymousAuthenticationFilter
-  SessionManagementFilter
-  ExceptionTranslationFilter
-  AuthorizationFilter
-]
-
-
-************************************************************
-
-
-2023-06-11T11:31:42.431-05:00  INFO 42222 --- [    Test worker] c.l.e.filter.AuthoritiesLoggingAtFilter  : Authentication Validation is in progress
-
-MockHttpServletRequest:
-      HTTP Method = GET
-      Request URI = /order/allOrdersHistory
-       Parameters = {}
-          Headers = []
-             Body = null
-    Session Attrs = {}
-
-Handler:
-             Type = com.liftoff.ecommerce.Controllers.OrderController
-           Method = com.liftoff.ecommerce.Controllers.OrderController#returnAllCompletedOrders()
-
-Async:
-    Async started = false
-     Async result = null
-
-Resolved Exception:
-             Type = null
-
-ModelAndView:
-        View name = null
-             View = null
-            Model = null
-
-FlashMap:
-       Attributes = null
-
-MockHttpServletResponse:
-           Status = 200
-    Error message = null
-          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"application/json", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
-     Content type = application/json
-             Body = [{"id":1,"createDt":null,"totalOrderQuantity":3,"totalOrderPrice":27.97,"completedOrderItems":[],"email":"john@example.com"},{"id":2,"createDt":null,"totalOrderQuantity":3,"totalOrderPrice":8.99,"completedOrderItems":[],"email":"jane@example.com"}]
-    Forwarded URL = null
-   Redirected URL = null
-          Cookies = []
-2023-06-11T11:31:42.439-05:00  INFO 42222 --- [    Test worker] Spring Security Debugger                 : 
-
-************************************************************
-
-Request received for GET '/order/allOrdersHistory':
-
-org.springframework.mock.web.MockHttpServletRequest@6c7554d6
-
-servletPath:
-pathInfo:/order/allOrdersHistory
-headers: 
+********************************************************************
+**********        Security debugging is enabled.       *************
+**********    This may include sensitive information.  *************
+**********      Do not use in a production system!     *************
+********************************************************************
 
 
-Security filter chain: [
-  DisableEncodeUrlFilter
-  WebAsyncManagerIntegrationFilter
-  SecurityContextHolderFilter
-  HeaderWriterFilter
-  CorsFilter
-  LogoutFilter
-  UsernamePasswordAuthenticationFilter
-  DefaultLoginPageGeneratingFilter
-  DefaultLogoutPageGeneratingFilter
-  JWTTokenValidatorFilter
-  AuthoritiesLoggingAtFilter
-  BasicAuthenticationFilter
-  AuthoritiesLoggingAfterFilter
-  JWTTokenGeneratorFilter
-  RequestCacheAwareFilter
-  SecurityContextHolderAwareRequestFilter
-  AnonymousAuthenticationFilter
-  SessionManagementFilter
-  ExceptionTranslationFilter
-  AuthorizationFilter
-]
+2024-06-11T19:34:02.752Z  INFO 56431 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-06-11T19:34:02.841Z  INFO 56431 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-06-11T19:34:02.841Z  INFO 56431 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-06-11T19:34:02.844Z  INFO 56431 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2024-06-11T19:34:02.868Z  INFO 56431 --- [    Test worker] c.l.e.S.OrderServiceIntegrationTest      : Started OrderServiceIntegrationTest in 3.168 seconds (process running for 126.626)
+2024-06-11T19:34:03.140Z  INFO 56431 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T19:34:03.141Z  INFO 56431 --- [    Test worker] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2024-06-11T19:34:03.150Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-23 - Shutdown initiated...
+2024-06-11T19:34:03.162Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-23 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.0.5)
+
+2024-06-11T19:34:03.325Z  INFO 56431 --- [    Test worker] c.l.e.S.OrderServiceIntegrationTest      : Starting OrderServiceIntegrationTest using Java 17.0.11 with PID 56431 (started by root in /root/backend/movieDL_backend)
+2024-06-11T19:34:03.327Z  INFO 56431 --- [    Test worker] c.l.e.S.OrderServiceIntegrationTest      : No active profile set, falling back to 1 default profile: "default"
+2024-06-11T19:34:03.960Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-11T19:34:03.962Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-06-11T19:34:03.979Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.CompletedOrderRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:03.980Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.CompletedOrderedItemRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:03.980Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.CustomerRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:03.981Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.GenreRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:03.981Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.MovieRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:03.981Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.ShoppingCartRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:03.982Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 0 JDBC repository interfaces.
+2024-06-11T19:34:04.026Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-11T19:34:04.026Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-11T19:34:04.073Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 6 JPA repository interfaces.
+2024-06-11T19:34:04.400Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-24 - Starting...
+2024-06-11T19:34:04.410Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-24 - Added connection conn230: url=jdbc:h2:mem:testdb user=SA
+2024-06-11T19:34:04.410Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-24 - Start completed.
+2024-06-11T19:34:04.505Z  INFO 56431 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-11T19:34:04.520Z  INFO 56431 --- [    Test worker] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-06-11T19:34:05.040Z  INFO 56431 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-06-11T19:34:05.041Z  INFO 56431 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T19:34:05.323Z  WARN 56431 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-11T19:34:05.589Z  INFO 56431 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@10dab952, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2da8d953, org.springframework.security.web.context.SecurityContextHolderFilter@e9f17f5, org.springframework.security.web.header.HeaderWriterFilter@2102268c, org.springframework.web.filter.CorsFilter@398194ef, org.springframework.security.web.authentication.logout.LogoutFilter@4e38f339, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@9285ec, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@372f19b0, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@609d29dc, com.liftoff.ecommerce.filter.JWTTokenValidatorFilter@25c81cb4, com.liftoff.ecommerce.filter.AuthoritiesLoggingAtFilter@4e413b1f, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@9ba1ffc, com.liftoff.ecommerce.filter.AuthoritiesLoggingAfterFilter@7b52e8d4, com.liftoff.ecommerce.filter.JWTTokenGeneratorFilter@7208edab, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3167c53c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1e1a3da, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@174072e2, org.springframework.security.web.session.SessionManagementFilter@71e8e214, org.springframework.security.web.access.ExceptionTranslationFilter@2063e48e, org.springframework.security.web.access.intercept.AuthorizationFilter@d660527]
+2024-06-11T19:34:05.597Z  WARN 56431 --- [    Test worker] o.s.s.c.a.web.builders.WebSecurity       : 
+
+********************************************************************
+**********        Security debugging is enabled.       *************
+**********    This may include sensitive information.  *************
+**********      Do not use in a production system!     *************
+********************************************************************
 
 
-************************************************************
+2024-06-11T19:34:05.856Z  INFO 56431 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-06-11T19:34:05.886Z  INFO 56431 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-06-11T19:34:05.886Z  INFO 56431 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-06-11T19:34:05.889Z  INFO 56431 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2024-06-11T19:34:05.908Z  INFO 56431 --- [    Test worker] c.l.e.S.OrderServiceIntegrationTest      : Started OrderServiceIntegrationTest in 2.731 seconds (process running for 129.666)
+2024-06-11T19:34:06.101Z  INFO 56431 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T19:34:06.106Z  INFO 56431 --- [    Test worker] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2024-06-11T19:34:06.117Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-24 - Shutdown initiated...
+2024-06-11T19:34:06.123Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-24 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.0.5)
+
+2024-06-11T19:34:06.243Z  INFO 56431 --- [    Test worker] c.l.e.S.OrderServiceIntegrationTest      : Starting OrderServiceIntegrationTest using Java 17.0.11 with PID 56431 (started by root in /root/backend/movieDL_backend)
+2024-06-11T19:34:06.244Z  INFO 56431 --- [    Test worker] c.l.e.S.OrderServiceIntegrationTest      : No active profile set, falling back to 1 default profile: "default"
+2024-06-11T19:34:06.727Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-11T19:34:06.729Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-06-11T19:34:06.742Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.CompletedOrderRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:06.743Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.CompletedOrderedItemRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:06.743Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.CustomerRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:06.743Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.GenreRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:06.744Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.MovieRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:06.744Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.ShoppingCartRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:06.745Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 0 JDBC repository interfaces.
+2024-06-11T19:34:06.753Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-11T19:34:06.753Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-11T19:34:06.774Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 6 JPA repository interfaces.
+2024-06-11T19:34:06.974Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-25 - Starting...
+2024-06-11T19:34:06.978Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-25 - Added connection conn240: url=jdbc:h2:mem:testdb user=SA
+2024-06-11T19:34:06.978Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-25 - Start completed.
+2024-06-11T19:34:07.016Z  INFO 56431 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-11T19:34:07.024Z  INFO 56431 --- [    Test worker] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-06-11T19:34:07.702Z  INFO 56431 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-06-11T19:34:07.702Z  INFO 56431 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T19:34:08.001Z  WARN 56431 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-11T19:34:08.247Z  INFO 56431 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4098a650, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6c41db12, org.springframework.security.web.context.SecurityContextHolderFilter@623ea07, org.springframework.security.web.header.HeaderWriterFilter@6d76df03, org.springframework.web.filter.CorsFilter@644a5479, org.springframework.security.web.authentication.logout.LogoutFilter@41c101b1, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4c889162, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@682f8889, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@fc2bebe, com.liftoff.ecommerce.filter.JWTTokenValidatorFilter@a6d2330, com.liftoff.ecommerce.filter.AuthoritiesLoggingAtFilter@6896e024, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@58dddcb, com.liftoff.ecommerce.filter.AuthoritiesLoggingAfterFilter@5e4988d3, com.liftoff.ecommerce.filter.JWTTokenGeneratorFilter@44e4eaea, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@670ae7df, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3c5fb2fa, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@277335e5, org.springframework.security.web.session.SessionManagementFilter@cab11e1, org.springframework.security.web.access.ExceptionTranslationFilter@51a60dd9, org.springframework.security.web.access.intercept.AuthorizationFilter@14b71841]
+2024-06-11T19:34:08.254Z  WARN 56431 --- [    Test worker] o.s.s.c.a.web.builders.WebSecurity       : 
+
+********************************************************************
+**********        Security debugging is enabled.       *************
+**********    This may include sensitive information.  *************
+**********      Do not use in a production system!     *************
+********************************************************************
 
 
-2023-06-11T11:31:42.440-05:00  INFO 42222 --- [    Test worker] c.l.e.filter.AuthoritiesLoggingAtFilter  : Authentication Validation is in progress
-2023-06-11T11:31:42.444-05:00  INFO 42222 --- [    Test worker] Spring Security Debugger                 : 
+2024-06-11T19:34:08.639Z  INFO 56431 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-06-11T19:34:08.669Z  INFO 56431 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-06-11T19:34:08.672Z  INFO 56431 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-06-11T19:34:08.676Z  INFO 56431 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2024-06-11T19:34:08.696Z  INFO 56431 --- [    Test worker] c.l.e.S.OrderServiceIntegrationTest      : Started OrderServiceIntegrationTest in 2.56 seconds (process running for 132.454)
+2024-06-11T19:34:08.881Z  INFO 56431 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T19:34:08.881Z  INFO 56431 --- [    Test worker] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2024-06-11T19:34:09.024Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-25 - Shutdown initiated...
+2024-06-11T19:34:09.040Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-25 - Shutdown completed.
 
-************************************************************
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.0.5)
 
-Request received for GET '/order/allOrdersHistory':
+2024-06-11T19:34:09.086Z  INFO 56431 --- [    Test worker] c.l.e.S.OrderServiceIntegrationTest      : Starting OrderServiceIntegrationTest using Java 17.0.11 with PID 56431 (started by root in /root/backend/movieDL_backend)
+2024-06-11T19:34:09.087Z  INFO 56431 --- [    Test worker] c.l.e.S.OrderServiceIntegrationTest      : No active profile set, falling back to 1 default profile: "default"
+2024-06-11T19:34:11.990Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-11T19:34:11.991Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-06-11T19:34:12.015Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.CompletedOrderRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:12.016Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.CompletedOrderedItemRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:12.016Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.CustomerRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:12.016Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.GenreRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:12.016Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.MovieRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:12.016Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.ShoppingCartRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:12.016Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 0 JDBC repository interfaces.
+2024-06-11T19:34:12.021Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-11T19:34:12.021Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-11T19:34:12.041Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 6 JPA repository interfaces.
+2024-06-11T19:34:12.309Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-26 - Starting...
+2024-06-11T19:34:12.313Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-26 - Added connection conn250: url=jdbc:h2:mem:testdb user=SA
+2024-06-11T19:34:12.313Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-26 - Start completed.
+2024-06-11T19:34:12.360Z  INFO 56431 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-11T19:34:12.369Z  INFO 56431 --- [    Test worker] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-06-11T19:34:15.696Z  INFO 56431 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-06-11T19:34:15.698Z  INFO 56431 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T19:34:15.961Z  WARN 56431 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-11T19:34:16.189Z  INFO 56431 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@260e314e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3fcbbc9b, org.springframework.security.web.context.SecurityContextHolderFilter@126d0e33, org.springframework.security.web.header.HeaderWriterFilter@5a2bbf80, org.springframework.web.filter.CorsFilter@67d122d3, org.springframework.security.web.authentication.logout.LogoutFilter@7ab286d9, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@14198b6a, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@24eabda6, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@7d965f4, com.liftoff.ecommerce.filter.JWTTokenValidatorFilter@500ab000, com.liftoff.ecommerce.filter.AuthoritiesLoggingAtFilter@3247e1fe, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7a73537e, com.liftoff.ecommerce.filter.AuthoritiesLoggingAfterFilter@5c6e8adf, com.liftoff.ecommerce.filter.JWTTokenGeneratorFilter@10d4b263, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@59bfa4b2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5eefd7ba, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@15db8ac9, org.springframework.security.web.session.SessionManagementFilter@11cd665f, org.springframework.security.web.access.ExceptionTranslationFilter@79d649ed, org.springframework.security.web.access.intercept.AuthorizationFilter@2b365d41]
+2024-06-11T19:34:16.200Z  WARN 56431 --- [    Test worker] o.s.s.c.a.web.builders.WebSecurity       : 
 
-org.springframework.mock.web.MockHttpServletRequest@3a1f404b
-
-servletPath:
-pathInfo:/order/allOrdersHistory
-headers: 
-
-
-Security filter chain: [
-  DisableEncodeUrlFilter
-  WebAsyncManagerIntegrationFilter
-  SecurityContextHolderFilter
-  HeaderWriterFilter
-  CorsFilter
-  LogoutFilter
-  UsernamePasswordAuthenticationFilter
-  DefaultLoginPageGeneratingFilter
-  DefaultLogoutPageGeneratingFilter
-  JWTTokenValidatorFilter
-  AuthoritiesLoggingAtFilter
-  BasicAuthenticationFilter
-  AuthoritiesLoggingAfterFilter
-  JWTTokenGeneratorFilter
-  RequestCacheAwareFilter
-  SecurityContextHolderAwareRequestFilter
-  AnonymousAuthenticationFilter
-  SessionManagementFilter
-  ExceptionTranslationFilter
-  AuthorizationFilter
-]
-
-
-************************************************************
+********************************************************************
+**********        Security debugging is enabled.       *************
+**********    This may include sensitive information.  *************
+**********      Do not use in a production system!     *************
+********************************************************************
 
 
-2023-06-11T11:31:42.444-05:00  INFO 42222 --- [    Test worker] c.l.e.filter.AuthoritiesLoggingAtFilter  : Authentication Validation is in progress
-2023-06-11T11:31:42.449-05:00  INFO 42222 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-06-11T11:31:42.450-05:00  INFO 42222 --- [    Test worker] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2023-06-11T11:31:42.451-05:00  INFO 42222 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
-2023-06-11T11:31:42.460-05:00  INFO 42222 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2024-06-11T19:34:16.480Z  INFO 56431 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-06-11T19:34:16.523Z  INFO 56431 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-06-11T19:34:16.529Z  INFO 56431 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-06-11T19:34:16.533Z  INFO 56431 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2024-06-11T19:34:16.551Z  INFO 56431 --- [    Test worker] c.l.e.S.OrderServiceIntegrationTest      : Started OrderServiceIntegrationTest in 7.504 seconds (process running for 140.309)
+2024-06-11T19:34:16.772Z  INFO 56431 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T19:34:16.773Z  INFO 56431 --- [    Test worker] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2024-06-11T19:34:16.780Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-26 - Shutdown initiated...
+2024-06-11T19:34:16.790Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-26 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.0.5)
+
+2024-06-11T19:34:16.892Z  INFO 56431 --- [    Test worker] c.l.e.S.OrderServiceIntegrationTest      : Starting OrderServiceIntegrationTest using Java 17.0.11 with PID 56431 (started by root in /root/backend/movieDL_backend)
+2024-06-11T19:34:16.893Z  INFO 56431 --- [    Test worker] c.l.e.S.OrderServiceIntegrationTest      : No active profile set, falling back to 1 default profile: "default"
+2024-06-11T19:34:18.572Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-11T19:34:18.578Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-06-11T19:34:18.612Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.CompletedOrderRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:18.613Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.CompletedOrderedItemRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:18.614Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.CustomerRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:18.619Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.GenreRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:18.621Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.MovieRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:18.622Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.ShoppingCartRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:18.626Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44 ms. Found 0 JDBC repository interfaces.
+2024-06-11T19:34:18.639Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-11T19:34:18.640Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-11T19:34:18.682Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41 ms. Found 6 JPA repository interfaces.
+2024-06-11T19:34:18.869Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-27 - Starting...
+2024-06-11T19:34:18.878Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-27 - Added connection conn260: url=jdbc:h2:mem:testdb user=SA
+2024-06-11T19:34:18.879Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-27 - Start completed.
+2024-06-11T19:34:18.921Z  INFO 56431 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-11T19:34:18.937Z  INFO 56431 --- [    Test worker] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-06-11T19:34:19.233Z  INFO 56431 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-06-11T19:34:19.238Z  INFO 56431 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T19:34:19.423Z  WARN 56431 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-11T19:34:19.559Z  INFO 56431 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@8aed56b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@9177c5f, org.springframework.security.web.context.SecurityContextHolderFilter@28682a5, org.springframework.security.web.header.HeaderWriterFilter@37fffa9e, org.springframework.web.filter.CorsFilter@72e08ab9, org.springframework.security.web.authentication.logout.LogoutFilter@16e80db6, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@731113af, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@b11c03c, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@4638fd26, com.liftoff.ecommerce.filter.JWTTokenValidatorFilter@38437d07, com.liftoff.ecommerce.filter.AuthoritiesLoggingAtFilter@a840bd4, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@25c235c6, com.liftoff.ecommerce.filter.AuthoritiesLoggingAfterFilter@7cc7fd7f, com.liftoff.ecommerce.filter.JWTTokenGeneratorFilter@7d97fe0c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@625925d4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2aba180b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5e1f1ffc, org.springframework.security.web.session.SessionManagementFilter@3ef3ef37, org.springframework.security.web.access.ExceptionTranslationFilter@32ba50b9, org.springframework.security.web.access.intercept.AuthorizationFilter@69fd18b1]
+2024-06-11T19:34:19.561Z  WARN 56431 --- [    Test worker] o.s.s.c.a.web.builders.WebSecurity       : 
+
+********************************************************************
+**********        Security debugging is enabled.       *************
+**********    This may include sensitive information.  *************
+**********      Do not use in a production system!     *************
+********************************************************************
+
+
+2024-06-11T19:34:19.732Z  INFO 56431 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-06-11T19:34:19.763Z  INFO 56431 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-06-11T19:34:19.764Z  INFO 56431 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-06-11T19:34:19.767Z  INFO 56431 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2024-06-11T19:34:19.782Z  INFO 56431 --- [    Test worker] c.l.e.S.OrderServiceIntegrationTest      : Started OrderServiceIntegrationTest in 2.979 seconds (process running for 143.541)
+2024-06-11T19:34:19.858Z  INFO 56431 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T19:34:19.859Z  INFO 56431 --- [    Test worker] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2024-06-11T19:34:19.867Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-27 - Shutdown initiated...
+2024-06-11T19:34:19.874Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-27 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.0.5)
+
+2024-06-11T19:34:19.911Z  INFO 56431 --- [    Test worker] c.l.e.S.OrderServiceIntegrationTest      : Starting OrderServiceIntegrationTest using Java 17.0.11 with PID 56431 (started by root in /root/backend/movieDL_backend)
+2024-06-11T19:34:19.912Z  INFO 56431 --- [    Test worker] c.l.e.S.OrderServiceIntegrationTest      : No active profile set, falling back to 1 default profile: "default"
+2024-06-11T19:34:20.246Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-11T19:34:20.246Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-06-11T19:34:20.250Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.CompletedOrderRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:20.253Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.CompletedOrderedItemRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:20.256Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.CustomerRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:20.256Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.GenreRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:20.256Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.MovieRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:20.257Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.ShoppingCartRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:20.257Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 JDBC repository interfaces.
+2024-06-11T19:34:20.264Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-11T19:34:20.264Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-11T19:34:20.288Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 6 JPA repository interfaces.
+2024-06-11T19:34:20.394Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-28 - Starting...
+2024-06-11T19:34:20.402Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-28 - Added connection conn270: url=jdbc:h2:mem:testdb user=SA
+2024-06-11T19:34:20.402Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-28 - Start completed.
+2024-06-11T19:34:20.433Z  INFO 56431 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-11T19:34:20.449Z  INFO 56431 --- [    Test worker] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-06-11T19:34:20.710Z  INFO 56431 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-06-11T19:34:20.713Z  INFO 56431 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T19:34:20.868Z  WARN 56431 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-11T19:34:20.977Z  INFO 56431 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@31d82b28, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7a471dcc, org.springframework.security.web.context.SecurityContextHolderFilter@304c693f, org.springframework.security.web.header.HeaderWriterFilter@6a966d, org.springframework.web.filter.CorsFilter@2e945feb, org.springframework.security.web.authentication.logout.LogoutFilter@66cec9fb, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6396f235, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@6ad10dd8, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@66ae2e92, com.liftoff.ecommerce.filter.JWTTokenValidatorFilter@165fc804, com.liftoff.ecommerce.filter.AuthoritiesLoggingAtFilter@54341e7e, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@73076ead, com.liftoff.ecommerce.filter.AuthoritiesLoggingAfterFilter@58d36814, com.liftoff.ecommerce.filter.JWTTokenGeneratorFilter@4f1e0722, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6337942b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@37babfde, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@27e9f92d, org.springframework.security.web.session.SessionManagementFilter@51619af3, org.springframework.security.web.access.ExceptionTranslationFilter@6636a3ce, org.springframework.security.web.access.intercept.AuthorizationFilter@66b5ac2b]
+2024-06-11T19:34:20.982Z  WARN 56431 --- [    Test worker] o.s.s.c.a.web.builders.WebSecurity       : 
+
+********************************************************************
+**********        Security debugging is enabled.       *************
+**********    This may include sensitive information.  *************
+**********      Do not use in a production system!     *************
+********************************************************************
+
+
+2024-06-11T19:34:21.129Z  INFO 56431 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-06-11T19:34:21.151Z  INFO 56431 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-06-11T19:34:21.151Z  INFO 56431 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-06-11T19:34:21.152Z  INFO 56431 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2024-06-11T19:34:21.165Z  INFO 56431 --- [    Test worker] c.l.e.S.OrderServiceIntegrationTest      : Started OrderServiceIntegrationTest in 1.287 seconds (process running for 144.923)
+2024-06-11T19:34:21.235Z  INFO 56431 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T19:34:21.235Z  INFO 56431 --- [    Test worker] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2024-06-11T19:34:21.240Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-28 - Shutdown initiated...
+2024-06-11T19:34:21.246Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-28 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.0.5)
+
+2024-06-11T19:34:21.492Z  INFO 56431 --- [    Test worker] c.l.e.S.OrderServiceIntegrationTest      : Starting OrderServiceIntegrationTest using Java 17.0.11 with PID 56431 (started by root in /root/backend/movieDL_backend)
+2024-06-11T19:34:21.494Z  INFO 56431 --- [    Test worker] c.l.e.S.OrderServiceIntegrationTest      : No active profile set, falling back to 1 default profile: "default"
+2024-06-11T19:34:21.752Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-11T19:34:21.752Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-06-11T19:34:21.756Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.CompletedOrderRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:21.760Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.CompletedOrderedItemRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:21.761Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.CustomerRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:21.761Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.GenreRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:21.761Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.MovieRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:21.762Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.ShoppingCartRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:21.762Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 JDBC repository interfaces.
+2024-06-11T19:34:21.766Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-11T19:34:21.770Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-11T19:34:21.784Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 6 JPA repository interfaces.
+2024-06-11T19:34:21.905Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-29 - Starting...
+2024-06-11T19:34:21.910Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-29 - Added connection conn280: url=jdbc:h2:mem:testdb user=SA
+2024-06-11T19:34:21.911Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-29 - Start completed.
+2024-06-11T19:34:21.938Z  INFO 56431 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-11T19:34:21.953Z  INFO 56431 --- [    Test worker] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-06-11T19:34:22.232Z  INFO 56431 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-06-11T19:34:22.238Z  INFO 56431 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T19:34:22.380Z  WARN 56431 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-11T19:34:22.488Z  INFO 56431 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6893c2fb, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@10eaf59b, org.springframework.security.web.context.SecurityContextHolderFilter@21263d, org.springframework.security.web.header.HeaderWriterFilter@2c08024, org.springframework.web.filter.CorsFilter@6f36f1f3, org.springframework.security.web.authentication.logout.LogoutFilter@7ebb893e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3209a550, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@4176efc6, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@3674ffcb, com.liftoff.ecommerce.filter.JWTTokenValidatorFilter@408667e4, com.liftoff.ecommerce.filter.AuthoritiesLoggingAtFilter@7870442, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@10593856, com.liftoff.ecommerce.filter.AuthoritiesLoggingAfterFilter@5f66d428, com.liftoff.ecommerce.filter.JWTTokenGeneratorFilter@4e7df2a8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7879d373, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7ebebdf8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3db715c4, org.springframework.security.web.session.SessionManagementFilter@1265b243, org.springframework.security.web.access.ExceptionTranslationFilter@39483d0f, org.springframework.security.web.access.intercept.AuthorizationFilter@39f63d9]
+2024-06-11T19:34:22.493Z  WARN 56431 --- [    Test worker] o.s.s.c.a.web.builders.WebSecurity       : 
+
+********************************************************************
+**********        Security debugging is enabled.       *************
+**********    This may include sensitive information.  *************
+**********      Do not use in a production system!     *************
+********************************************************************
+
+
+2024-06-11T19:34:22.623Z  INFO 56431 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-06-11T19:34:22.646Z  INFO 56431 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-06-11T19:34:22.647Z  INFO 56431 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-06-11T19:34:22.648Z  INFO 56431 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2024-06-11T19:34:22.658Z  INFO 56431 --- [    Test worker] c.l.e.S.OrderServiceIntegrationTest      : Started OrderServiceIntegrationTest in 1.409 seconds (process running for 146.416)
+2024-06-11T19:34:22.772Z  INFO 56431 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T19:34:22.773Z  INFO 56431 --- [    Test worker] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2024-06-11T19:34:22.780Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-29 - Shutdown initiated...
+2024-06-11T19:34:22.783Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-29 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.0.5)
+
+2024-06-11T19:34:22.825Z  INFO 56431 --- [    Test worker] c.l.e.S.OrderServiceIntegrationTest      : Starting OrderServiceIntegrationTest using Java 17.0.11 with PID 56431 (started by root in /root/backend/movieDL_backend)
+2024-06-11T19:34:22.826Z  INFO 56431 --- [    Test worker] c.l.e.S.OrderServiceIntegrationTest      : No active profile set, falling back to 1 default profile: "default"
+2024-06-11T19:34:23.056Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-11T19:34:23.057Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-06-11T19:34:23.088Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.CompletedOrderRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:23.089Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.CompletedOrderedItemRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:23.089Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.CustomerRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:23.089Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.GenreRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:23.090Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.MovieRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:23.090Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.ShoppingCartRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:23.090Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32 ms. Found 0 JDBC repository interfaces.
+2024-06-11T19:34:23.093Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-11T19:34:23.098Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-11T19:34:23.114Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 6 JPA repository interfaces.
+2024-06-11T19:34:23.215Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-30 - Starting...
+2024-06-11T19:34:23.219Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-30 - Added connection conn290: url=jdbc:h2:mem:testdb user=SA
+2024-06-11T19:34:23.220Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-30 - Start completed.
+2024-06-11T19:34:23.250Z  INFO 56431 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-11T19:34:23.260Z  INFO 56431 --- [    Test worker] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-06-11T19:34:23.521Z  INFO 56431 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-06-11T19:34:23.530Z  INFO 56431 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T19:34:23.689Z  WARN 56431 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-11T19:34:23.841Z  INFO 56431 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7cecc377, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3315c0d3, org.springframework.security.web.context.SecurityContextHolderFilter@64122c87, org.springframework.security.web.header.HeaderWriterFilter@11c36ee2, org.springframework.web.filter.CorsFilter@49ab0a8, org.springframework.security.web.authentication.logout.LogoutFilter@28c3737b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@440e76d7, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@231a639d, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@5fc80400, com.liftoff.ecommerce.filter.JWTTokenValidatorFilter@452583f5, com.liftoff.ecommerce.filter.AuthoritiesLoggingAtFilter@58abc0da, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@77658d86, com.liftoff.ecommerce.filter.AuthoritiesLoggingAfterFilter@9653497, com.liftoff.ecommerce.filter.JWTTokenGeneratorFilter@1692d9bf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5ba4a00d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@519a71e5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7fc1cab3, org.springframework.security.web.session.SessionManagementFilter@4de7e2a1, org.springframework.security.web.access.ExceptionTranslationFilter@13058181, org.springframework.security.web.access.intercept.AuthorizationFilter@5aa2a283]
+2024-06-11T19:34:23.852Z  WARN 56431 --- [    Test worker] o.s.s.c.a.web.builders.WebSecurity       : 
+
+********************************************************************
+**********        Security debugging is enabled.       *************
+**********    This may include sensitive information.  *************
+**********      Do not use in a production system!     *************
+********************************************************************
+
+
+2024-06-11T19:34:24.088Z  INFO 56431 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-06-11T19:34:24.122Z  INFO 56431 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-06-11T19:34:24.129Z  INFO 56431 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-06-11T19:34:24.130Z  INFO 56431 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2024-06-11T19:34:24.145Z  INFO 56431 --- [    Test worker] c.l.e.S.OrderServiceIntegrationTest      : Started OrderServiceIntegrationTest in 1.358 seconds (process running for 147.903)
+2024-06-11T19:34:24.326Z  INFO 56431 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T19:34:24.326Z  INFO 56431 --- [    Test worker] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2024-06-11T19:34:24.335Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-30 - Shutdown initiated...
+2024-06-11T19:34:24.340Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-30 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.0.5)
+
+2024-06-11T19:34:24.371Z  INFO 56431 --- [    Test worker] c.l.e.S.OrderServiceIntegrationTest      : Starting OrderServiceIntegrationTest using Java 17.0.11 with PID 56431 (started by root in /root/backend/movieDL_backend)
+2024-06-11T19:34:24.378Z  INFO 56431 --- [    Test worker] c.l.e.S.OrderServiceIntegrationTest      : No active profile set, falling back to 1 default profile: "default"
+2024-06-11T19:34:24.599Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-11T19:34:24.606Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-06-11T19:34:24.610Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.CompletedOrderRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:24.614Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.CompletedOrderedItemRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:24.615Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.CustomerRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:24.615Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.GenreRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:24.615Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.MovieRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:24.615Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.ShoppingCartRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:24.615Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JDBC repository interfaces.
+2024-06-11T19:34:24.618Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-11T19:34:24.620Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-11T19:34:24.633Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 6 JPA repository interfaces.
+2024-06-11T19:34:24.739Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-31 - Starting...
+2024-06-11T19:34:24.745Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-31 - Added connection conn300: url=jdbc:h2:mem:testdb user=SA
+2024-06-11T19:34:24.746Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-31 - Start completed.
+2024-06-11T19:34:24.770Z  INFO 56431 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-11T19:34:24.777Z  INFO 56431 --- [    Test worker] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-06-11T19:34:25.027Z  INFO 56431 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-06-11T19:34:25.027Z  INFO 56431 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T19:34:25.171Z  WARN 56431 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-11T19:34:25.273Z  INFO 56431 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@37f78a9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3ccf7705, org.springframework.security.web.context.SecurityContextHolderFilter@377d6875, org.springframework.security.web.header.HeaderWriterFilter@4a66a9cc, org.springframework.web.filter.CorsFilter@599a6c8a, org.springframework.security.web.authentication.logout.LogoutFilter@5467e77d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4ad5ecaa, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@1d5d6ec5, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@6df8179d, com.liftoff.ecommerce.filter.JWTTokenValidatorFilter@15ba80bb, com.liftoff.ecommerce.filter.AuthoritiesLoggingAtFilter@520aaa56, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2162b682, com.liftoff.ecommerce.filter.AuthoritiesLoggingAfterFilter@587e72a1, com.liftoff.ecommerce.filter.JWTTokenGeneratorFilter@7517c2cc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@34443130, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4b93c6bd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@34692b8d, org.springframework.security.web.session.SessionManagementFilter@5b91a133, org.springframework.security.web.access.ExceptionTranslationFilter@27548ddf, org.springframework.security.web.access.intercept.AuthorizationFilter@77c918c3]
+2024-06-11T19:34:25.280Z  WARN 56431 --- [    Test worker] o.s.s.c.a.web.builders.WebSecurity       : 
+
+********************************************************************
+**********        Security debugging is enabled.       *************
+**********    This may include sensitive information.  *************
+**********      Do not use in a production system!     *************
+********************************************************************
+
+
+2024-06-11T19:34:25.416Z  INFO 56431 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-06-11T19:34:25.445Z  INFO 56431 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-06-11T19:34:25.446Z  INFO 56431 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-06-11T19:34:25.447Z  INFO 56431 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2024-06-11T19:34:25.459Z  INFO 56431 --- [    Test worker] c.l.e.S.OrderServiceIntegrationTest      : Started OrderServiceIntegrationTest in 1.114 seconds (process running for 149.217)
+2024-06-11T19:34:25.621Z  INFO 56431 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T19:34:25.622Z  INFO 56431 --- [    Test worker] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2024-06-11T19:34:26.320Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-31 - Shutdown initiated...
+2024-06-11T19:34:26.329Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-31 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.0.5)
+
+2024-06-11T19:34:26.380Z  INFO 56431 --- [    Test worker] c.l.e.S.OrderServiceIntegrationTest      : Starting OrderServiceIntegrationTest using Java 17.0.11 with PID 56431 (started by root in /root/backend/movieDL_backend)
+2024-06-11T19:34:26.382Z  INFO 56431 --- [    Test worker] c.l.e.S.OrderServiceIntegrationTest      : No active profile set, falling back to 1 default profile: "default"
+2024-06-11T19:34:28.570Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-11T19:34:28.573Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-06-11T19:34:28.590Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.CompletedOrderRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:28.590Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.CompletedOrderedItemRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:28.590Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.CustomerRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:28.590Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.GenreRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:28.590Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.MovieRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:28.590Z  INFO 56431 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.liftoff.ecommerce.Repositories.ShoppingCartRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-11T19:34:28.591Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 0 JDBC repository interfaces.
+2024-06-11T19:34:28.596Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-11T19:34:28.598Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-11T19:34:29.126Z  INFO 56431 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 527 ms. Found 6 JPA repository interfaces.
+2024-06-11T19:34:30.078Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-32 - Starting...
+2024-06-11T19:34:30.123Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-32 - Added connection conn310: url=jdbc:h2:mem:testdb user=SA
+2024-06-11T19:34:30.157Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-32 - Start completed.
+2024-06-11T19:34:30.236Z  INFO 56431 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-11T19:34:30.251Z  INFO 56431 --- [    Test worker] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-06-11T19:34:32.297Z  INFO 56431 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-06-11T19:34:32.298Z  INFO 56431 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T19:34:33.186Z  WARN 56431 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-11T19:34:33.691Z  INFO 56431 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@54924f2e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@62afdbc4, org.springframework.security.web.context.SecurityContextHolderFilter@743984d0, org.springframework.security.web.header.HeaderWriterFilter@1564c848, org.springframework.web.filter.CorsFilter@39a10c86, org.springframework.security.web.authentication.logout.LogoutFilter@614def27, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@55e1d689, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@73226924, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@3b06a960, com.liftoff.ecommerce.filter.JWTTokenValidatorFilter@7d2b6a11, com.liftoff.ecommerce.filter.AuthoritiesLoggingAtFilter@61c6ef8b, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5b5b3fc5, com.liftoff.ecommerce.filter.AuthoritiesLoggingAfterFilter@50b20a09, com.liftoff.ecommerce.filter.JWTTokenGeneratorFilter@5e71e4d6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@136730ab, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@20f29c07, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@782c66eb, org.springframework.security.web.session.SessionManagementFilter@7bd51adf, org.springframework.security.web.access.ExceptionTranslationFilter@74e27b7f, org.springframework.security.web.access.intercept.AuthorizationFilter@35607d6d]
+2024-06-11T19:34:33.737Z  WARN 56431 --- [    Test worker] o.s.s.c.a.web.builders.WebSecurity       : 
+
+********************************************************************
+**********        Security debugging is enabled.       *************
+**********    This may include sensitive information.  *************
+**********      Do not use in a production system!     *************
+********************************************************************
+
+
+2024-06-11T19:34:34.359Z  INFO 56431 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-06-11T19:34:35.488Z  INFO 56431 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-06-11T19:34:35.490Z  INFO 56431 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-06-11T19:34:35.528Z  INFO 56431 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 9 ms
+2024-06-11T19:34:35.677Z  INFO 56431 --- [    Test worker] c.l.e.S.OrderServiceIntegrationTest      : Started OrderServiceIntegrationTest in 9.335 seconds (process running for 159.435)
+2024-06-11T19:34:36.806Z  INFO 56431 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-11T19:34:36.812Z  INFO 56431 --- [    Test worker] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2024-06-11T19:34:36.831Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-32 - Shutdown initiated...
+2024-06-11T19:34:36.976Z  INFO 56431 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-32 - Shutdown completed.
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
