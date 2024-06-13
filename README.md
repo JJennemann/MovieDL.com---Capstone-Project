@@ -1,60 +1,56 @@
-# Register new user via POST request using Postman
 
-Prior to the steps below ensure you are running the back end project and localling hosting it at port:8080, as well as, having mySQL open and a schema connected to intelliJ
+# MovieDL (working title)
 
-1.) In Postman, open a new request tab 
+### Project Overview
+MovieDL is an e-commerce web app featuring a huge array of movies available for purchase and "download" via our custom browse and shopping cart system.  Quickly find your favorite movies, add them to your cart, and check out in quick succession, thanks to our fully responsive, appealing user interface and logical design.  Not sure what you want to watch, or need more information about a title?  Just ask our integrated chat bot assistant, powered by OpenAI!  Forgot what you bought in a previous order?  No worries, you can log in again anytime and review your purchases (and "download") from your full order history.  Worried that someone will judge you by your taste in movies?  Don't!  Your data has been secured via Spring Security and JWT and only you can access your information.  And keep an eye out for sales - the MovieDL team has been known to run sales on top releases when you least expect it!
 
-2.) Set the request drop down to POST and enter the URL path: http://localhost:8080/register
+***
 
-3.) Under the internal address bar, click body
+### Features:
+- REST API via Spring Boot & MySQL database, product data from TMDB API (The Movie Database) 
+- Browse products via homepage and by random suggestions throughout site
+- Product filter: text search (available on all pages), filter by 1+ movie genre selections
+- Product sort by alpha, price, movie release date
+- Custom shopping cart system with simultaneous client and server persistence via REST endpoints, with present-cart prioritization
+- User checkout and Stripe API payment UI for credit card payments (test mode only)
+- User order history tables with sort, pagination
+- User registration, login and editable profile page (CRUD functionality)
+- Unit and integration testing for REST API
+- Custom logging for Spring Security filters
+- Admin portal/dashboard - edit product details (CRUD functionality), view all orders
+- Chat GPT API integration - AI chatbot accessible from any page, answers user movie questions
+- EmailJS API integration via Contact Us page
+- Fully responsive styling, custom built UI components
+- Hosted via AWS: RDS, EC2, S3, Route 53 - www.moviedlproject.com
 
-4.) Above the text box click raw, this will make a new dropdown appear at the end that says 'text' in blue font. Click this and set the text type to JSON
+***
 
-5.) In the text box enter the following text:
+### Tech Stack, Front End:
+- [ReactJS](https://react.dev/) - JavaScript, JSX, CSS3
+- [React Router DOM](https://www.npmjs.com/package/react-router-dom)
+- [Zustand](https://github.com/pmndrs/zustand) state management
+- Styling/UI via [Bulma](https://bulma.io), [MUI](https://mui.com/), [FontAwesome Icons](https://fontawesome.com/icons)
+  
+### Tech Stack, Back End:
+- [Spring Boot](https://spring.io/projects/spring-boot) - Java
+- [Spring Security](https://docs.spring.io/spring-security/reference/index.html)
+- [MySQL](https://www.mysql.com)
+- Hibernate, JPA
+- [JWT](https://jwt.io/)
 
-    {
-        "email": "<email>",
-        "password": "<password>",
-        "role": "user",
-        "firstName": "<first name>",
-        "lastName": "<last name>",
-        "phoneNumber": "<phone number>",
-        "streetAddress": "<street address>",
-        "city": "<city>",
-        "state": "<state abbr>",
-        "zipCode": <zip code>
-}
+### APIs, Libraries, Etc
+- TMDB - The Movie Database
+- Stripe (test mode only)
+- JWT-Decode
+- EmailJS
+- Toastify
+- OpenAI (GPT)
+- React Select
+- PITest mutation testing
+***
 
-Of course, enter your own information in the < >'s, except for role, which you can just leave as user. Ensure you have quotes as those values are strings, except for zip code which can just be entered. 
+*Project ideated and built as a group project in [LaunchCode](https://www.launchcode.org) "LiftOff" educational program, 2023/04 - 2023/06.*
 
-6.) Hit send
+<p align="center">
+<a href="https://www.launchcode.org"><img src="https://www.launchcode.org/assets/dabomb-562825789d0850a41ddd8ef7eb0d0222d9ef99cd54594ee5e820cb6070fb9477.svg" alt="LaunchCode logo" title="LaunchCodeLogo" width="200"></a></p>
 
-7.) At the bottom of the screen you should see a message letting you know your user has been registered. Double check your customer table in MySQL to ensure the user has been successfuly added to the database.
-
-# Copy of commit message for the commit with the above code and structure that is allowing the above functionality
-
-1.) Created new Config package: Config package includes:
-   
-   a.) ProjectSecurityConfig class and includes SecurityFilterChain method to configure which URL paths require authentication and which do not. ProjectSecurityConfig class also contains PasswordEncoder method to communicate to spring security how passwords will be stored. 
-
-   b.) CustomerUserDetails class implementing UserDetailsService which includes Overrided loadUserByUserName method. 
-
-2.) New CustomerController with POST handler method that allows customer registration. 
-
-3.) New Customer model class that sets all the property fields group has determined as necessary for customer registration with getters and setters. 
-
-4.) New CustomerRepository interface extends CrudRepository and includes findByEmail method. 
-
-## Above structure results in:
-1.) Customer table builds in mySQL
-
-2.) able to register new Customers using POST request in Postman and prohibits duplicate registrations
-
-3.) able to login using newly registered customer crededntials 
-
-4.) SecurityFilterChain works to allow public access to some url paths and restricts others to only authenticated users -- simply for testing purposes I have set up the following URL paths to demonstrate this functionality:
-
-   a.) http://localhost:8080/ is open to all, allowing access to anyone without logging in first, and you should see all the movie objects like normal.
-   
-   b.) http://localhost:8080/{id} is set to require authentication -- if you attempt to go to this path you should be redirected to a login page. Assuming   you have already registered a new user following the steps above, simply enter those credentials. Once you hit submit you should be redirected to the 
-http://localhost:8080/{id} path you originally attempted to view
