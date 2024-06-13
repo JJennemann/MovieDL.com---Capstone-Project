@@ -1,3 +1,4 @@
+
 # MovieDL (working title)
 
 ### Project Overview
@@ -52,3 +53,4 @@ MovieDL is an e-commerce web app featuring a huge array of movies available for 
 
 <p align="center">
 <a href="https://www.launchcode.org"><img src="https://www.launchcode.org/assets/dabomb-562825789d0850a41ddd8ef7eb0d0222d9ef99cd54594ee5e820cb6070fb9477.svg" alt="LaunchCode logo" title="LaunchCodeLogo" width="200"></a></p>
+

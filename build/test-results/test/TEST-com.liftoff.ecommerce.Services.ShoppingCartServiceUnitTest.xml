@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.liftoff.ecommerce.Services.ShoppingCartServiceUnitTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2024-06-11T19:36:04" hostname="MovieDL" time="0.942">
+  <properties/>
+  <testcase name="testReturnAllCartsSuccess()" classname="com.liftoff.ecommerce.Services.ShoppingCartServiceUnitTest" time="0.016"/>
+  <testcase name="testRemoveItemFromCustomerCartWhenCartExists()" classname="com.liftoff.ecommerce.Services.ShoppingCartServiceUnitTest" time="0.015"/>
+  <testcase name="testRemoveAllItemsByCustomerFromCartWhenNoCartsFound()" classname="com.liftoff.ecommerce.Services.ShoppingCartServiceUnitTest" time="0.111"/>
+  <testcase name="testReturnAllCartsNotFound()" classname="com.liftoff.ecommerce.Services.ShoppingCartServiceUnitTest" time="0.019"/>
+  <testcase name="testReturnCartsByCustomerIdNotFound()" classname="com.liftoff.ecommerce.Services.ShoppingCartServiceUnitTest" time="0.016"/>
+  <testcase name="testReturnCartsByCustomerIdSuccess()" classname="com.liftoff.ecommerce.Services.ShoppingCartServiceUnitTest" time="0.379"/>
+  <testcase name="testRemoveAllItemsFromCartByCustomerWhenCartsExist()" classname="com.liftoff.ecommerce.Services.ShoppingCartServiceUnitTest" time="0.016"/>
+  <testcase name="testUpdateQuantityInCartUpdatesQuantityAndTotalPriceAndSaves()" classname="com.liftoff.ecommerce.Services.ShoppingCartServiceUnitTest" time="0.016"/>
+  <testcase name="testCreateNewShoppingCart()" classname="com.liftoff.ecommerce.Services.ShoppingCartServiceUnitTest" time="0.007"/>
+  <testcase name="testUpdateQuantityInCartNotFound()" classname="com.liftoff.ecommerce.Services.ShoppingCartServiceUnitTest" time="0.013"/>
+  <testcase name="testSetTotalPrice()" classname="com.liftoff.ecommerce.Services.ShoppingCartServiceUnitTest" time="0.269"/>
+  <testcase name="testRemoveItemFromCustomerCartWhenNoCartFound()" classname="com.liftoff.ecommerce.Services.ShoppingCartServiceUnitTest" time="0.017"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
